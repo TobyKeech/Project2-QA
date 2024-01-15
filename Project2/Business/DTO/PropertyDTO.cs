@@ -10,6 +10,8 @@ namespace Project2.Business.DTO
         {
             // Bookings = new HashSet<BookingDTO>();
         }
+
+
         [Key]
         public override int Id { get; set; }
         public string Address { get; set; }

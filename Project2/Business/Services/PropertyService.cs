@@ -58,7 +58,7 @@ namespace Project2.Business.Services
             return dtoProperty;
         }
 
-        public void Delete(Property dtoProperty)
+        public void Delete(PropertyDTO dtoProperty)
         {
             Property property = _mapper.Map<Property>(dtoProperty);
             _propertyrepository.Delete(property);
@@ -74,7 +74,7 @@ namespace Project2.Business.Services
         public PropertyDTO Update(PropertyDTO property)
         {
             Property propertyData = _mapper.Map<Property>(property);
-            var p = _propertyrepository.FindById(propertyData.PropertyId);
+            var p = _propertyrepository.FindById(propertyData.Id);
             if (p == null)
                 return null;
 
