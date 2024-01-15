@@ -24,6 +24,7 @@ namespace Project2.EF
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            //base.OnConfiguring(optionsBuilder);
             if (!optionsBuilder.IsConfigured)
             {
                 base.OnConfiguring(optionsBuilder);
@@ -141,7 +142,7 @@ namespace Project2.EF
             {
                 entity.ToTable("seller");
 
-                entity.Property(e => e.SellerId).HasColumnName("SELLER_ID");
+                entity.Property(e => e.Id).HasColumnName("SELLER_ID");
 
                 entity.Property(e => e.Address)
                     .HasMaxLength(255)
