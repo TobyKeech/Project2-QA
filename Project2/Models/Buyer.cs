@@ -10,6 +10,8 @@ namespace Project2.Models
     {
         public Buyer()
         {
+          //  Bookings = new HashSet<Booking>();
+           // Properties = new HashSet<Property>();
             //  Bookings = new HashSet<Booking>();
             // Properties = new HashSet<Property>();
         }
@@ -23,12 +25,7 @@ namespace Project2.Models
         public string Postcode { get; set; } = null!;
         public string Phone { get; set; } = null!;
 
-        public bool Equals(Buyer? other)
-        {
-            return Id == other.Id;
-        }
-
-        //  public virtual ICollection<Booking> Bookings { get; set; }
-        //  public virtual ICollection<Property> Properties { get; set; }
+        public virtual ICollection<Booking> Bookings { get; set; }
+        public virtual ICollection<Property> Properties { get; set; }
     }
 }

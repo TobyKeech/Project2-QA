@@ -6,8 +6,8 @@ namespace Project2.Business.DTO
 
     public class BuyerDTO : EntityBase, IEquatable<BuyerDTO>
     {
-        public BuyerDTO()
-        {
+	public BuyerDTO()
+	{
             //MovieCast = new HashSet<MovieCaseDTO>();
             //MovieCrew = new HashSet<MovieCrewDTO>();
         }
@@ -47,5 +47,5 @@ namespace Project2.Business.DTO
 
             };
         }
-    }
+	}
 }
