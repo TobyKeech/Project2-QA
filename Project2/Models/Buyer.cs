@@ -10,7 +10,7 @@ namespace Project2.Models
     {
         public Buyer()
         {
-          //  Bookings = new HashSet<Booking>();
+          // Bookings = new HashSet<Booking>();
            // Properties = new HashSet<Property>();
             //  Bookings = new HashSet<Booking>();
             // Properties = new HashSet<Property>();
@@ -27,5 +27,10 @@ namespace Project2.Models
 
         public virtual ICollection<Booking> Bookings { get; set; }
         public virtual ICollection<Property> Properties { get; set; }
+
+        public bool Equals(Buyer? other)
+        {
+            return Id == other.Id;
+        }
     }
 }
