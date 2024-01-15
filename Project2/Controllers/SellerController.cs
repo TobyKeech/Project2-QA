@@ -26,12 +26,14 @@ namespace Project2.Controllers
             return seller;
         }
 
-        // GET api/<SellerController>/5
-        /*[HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public ActionResult<SellerDTO> GetById(int id)
         {
-            return "value";
-        }*/
+            var seller = _sellerService.FindById(id);
+            return seller == null ? NotFound() : seller;
+        }
 
         // POST api/<SellerController>
         /*[HttpPost]
