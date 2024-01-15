@@ -57,7 +57,7 @@ CREATE TABLE [dbo].[property](
 	[TYPE] [nvarchar](9) NOT NULL,
 	[NUMBER_OF_BEDROOMS] [int] NOT NULL,
 	[NUMBER_OF_BATHROOMS] [int] NOT NULL,
-	[GARDEN] [binary](1) NOT NULL,
+	[GARDEN] [bit] NOT NULL,
 	[PRICE] [decimal](11, 2) NULL,
 	[STATUS] [nvarchar](9) NOT NULL,
 	[SELLER_ID] [int] NOT NULL,
