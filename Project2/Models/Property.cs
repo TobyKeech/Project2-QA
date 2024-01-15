@@ -13,7 +13,7 @@ namespace Project2.Models
             //Bookings = new HashSet<Booking>();
         }
 
-        [Column("PropertyId")]
+        [Column("Property_Id")]
         [Key]
         public override int Id { get; set; }
         public string Address { get; set; } = null!;
