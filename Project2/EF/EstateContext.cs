@@ -91,7 +91,7 @@ namespace Project2.EF
             {
                 entity.ToTable("property");
 
-                entity.Property(e => e.PropertyId).HasColumnName("PROPERTY_ID");
+                entity.Property(e => e.Id).HasColumnName("PROPERTY_ID");
 
                 entity.Property(e => e.Address)
                     .HasMaxLength(255)

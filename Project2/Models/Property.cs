@@ -10,7 +10,7 @@ namespace Project2.Models
     {
         public Property()
         {
-            //Bookings = new HashSet<Booking>();
+            Bookings = new HashSet<Booking>();
         }
 
         [Column("Property_Id")]
