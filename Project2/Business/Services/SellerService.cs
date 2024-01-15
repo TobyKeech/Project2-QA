@@ -70,7 +70,7 @@ namespace Project2.Business.Services
             if (s == null)
                 return null;
 
-            s.SellerId = sellerData.SellerId;
+            //s.SellerId = sellerData.SellerId;
             s.FirstName = sellerData.FirstName;
             s.Surname = sellerData.Surname;
             s.Address = sellerData.Address;
