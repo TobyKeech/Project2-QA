@@ -25,7 +25,14 @@ namespace Project2.Controllers
 
 
 
-
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public ActionResult<PropertyDTO> GetById(int id)
+        {
+            var property = _propertyService.FindById(id);
+            return property == null ? NotFound() : property;
+        }
 
 
 
