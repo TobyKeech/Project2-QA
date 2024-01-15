@@ -1,6 +1,7 @@
 ﻿namespace Project2.Persistence.Repositories.Contracts
 {
-    public class EntityBase
+    public abstract class EntityBase
     {
+        public abstract int Id { get; set; }
     }
 }
