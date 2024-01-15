@@ -2,6 +2,7 @@
 using Project2.Models;
 using Project2.Persistence.Repositories.Contracts;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Project2.Business.DTO
 {
@@ -9,9 +10,10 @@ namespace Project2.Business.DTO
     {
         public SellerDTO() { }
 
+        [Column("SELLER_ID")]
         [Key]
         public override int Id { get; set; }
-        public int SellerId { get; set; }
+        //public int SellerId { get; set; }
         public string FirstName { get; set; } = null!;
         public string Surname { get; set; } = null!;
         public string Address { get; set; } = null!;
@@ -30,7 +32,7 @@ namespace Project2.Business.DTO
             return new SellerDTO
             {
                 Id = this.Id,
-                SellerId = this.SellerId,
+                //SellerId = this.SellerId,
                 FirstName = this.FirstName,
                 Surname = this.Surname,
                 Address = this.Address,

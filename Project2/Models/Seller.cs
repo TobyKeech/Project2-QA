@@ -3,6 +3,7 @@ using Project2.Persistence.Repositories.Contracts;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Project2.Models
 {
@@ -13,9 +14,10 @@ namespace Project2.Models
             //Properties = new HashSet<Property>();
         }
 
+        [Column("SELLER_ID")]
         [Key]
         public override int Id { get; set; }
-        public int SellerId { get; set; }
+        //public int SellerId { get; set; }
         public string FirstName { get; set; } = null!;
         public string Surname { get; set; } = null!;
         public string Address { get; set; } = null!;
@@ -29,7 +31,7 @@ namespace Project2.Models
             return new SellerDTO
             {
                 Id = this.Id,
-                SellerId = this.SellerId,
+                //SellerId = this.SellerId,
                 FirstName = this.FirstName,
                 Surname = this.Surname,
                 Address = this.Address,
@@ -42,6 +44,7 @@ namespace Project2.Models
         public bool Equals(Seller? other)
         {
             return Id == other.Id;
+            //return SellerId == other.SellerId;
         }
     }
 }
