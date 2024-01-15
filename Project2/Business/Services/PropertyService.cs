@@ -16,12 +16,12 @@ namespace Project2.Business.Services
 
         public PropertyService(IPropertyRepository repository, IMapper mapper)
         {
-            _propertyService = repository;
+            _propertyrepository = repository;
             _mapper = mapper;
         }
         public IQueryable<PropertyDTO> FindAll()
         {
-            var properties = _propertyService.FindAll().ToList();
+            var properties = _propertyrepository.FindAll().ToList();
             List<PropertyDTO> dtoProperties = new List<PropertyDTO>();
             foreach (Property property in properties)
             {
@@ -33,35 +33,35 @@ namespace Project2.Business.Services
 
         public PropertyDTO FindById(int id)
         {
-            Property property = _propertyService.FindById(id);
+            Property property = _propertyrepository.FindById(id);
             PropertyDTO dtoProperty = _mapper.Map<PropertyDTO>(property);
             return dtoProperty;
         }
 
-        public IQueryable<PropertyDTO> FindByName(string PropertyName)
+        public IQueryable<PropertyDTO> FindByName(string PropertyAddress)
         {
-            IQueryable<Property> properties = _propertyService.FindByCondition(b => b.PropertyName == GenreName);
-            List<GenreDTO> dtoGenres = new List<GenreDTO>();
-            foreach (Genre genre in genres)
+            IQueryable<Property> properties = _propertyrepository.FindByCondition(b => b.Address == PropertyAddress);
+            List<PropertyDTO> dtoProperties = new List<PropertyDTO>();
+            foreach (Property property in properties)
             {
-                GenreDTO dtoGenre = _mapper.Map<GenreDTO>(genre);
-                dtoGenres.Add(dtoGenre);
+                PropertyDTO dtoProperty = _mapper.Map<PropertyDTO>(property);
+                dtoProperties.Add(dtoProperty);
             }
-            return dtoGenres.AsQueryable<GenreDTO>();
+            return dtoProperties.AsQueryable<PropertyDTO>();
         }
 
         public PropertyDTO Create(PropertyDTO dtoProperty)
         {
-            Genre genreData = _mapper.Map<Genre>(dtoGenre);
-            genreData = _genrerepository.Create(genreData);
-            dtoGenre = _mapper.Map<GenreDTO>(genreData);
-            return dtoGenre;
+            Property propertyData = _mapper.Map<Property>(dtoProperty);
+            propertyData = _propertyrepository.Create(propertyData);
+            dtoProperty = _mapper.Map<PropertyDTO>(propertyData);
+            return dtoProperty;
         }
 
         public void Delete(Property dtoProperty)
         {
-            Genre genre = _mapper.Map<Genre>(dtoGenre);
-            _genrerepository.Delete(genre);
+            Property property = _mapper.Map<Property>(dtoProperty);
+            _propertyrepository.Delete(property);
         }
 
         public IQueryable<PropertyDTO> FindByCondition(Expression<Func<PropertyDTO, bool>> expression)
@@ -74,19 +74,16 @@ namespace Project2.Business.Services
         public PropertyDTO Update(PropertyDTO property)
         {
             Property propertyData = _mapper.Map<Property>(property);
-            var p = _propertyrepository.FindById(propertyData.Id);
+            var p = _propertyrepository.FindById(propertyData.PropertyId);
             if (p == null)
                 return null;
 
-            p.PropertyAddress = propertyData.Address;
+            p.Address = propertyData.Address;
 
             Property prop = _propertyrepository.Update(p);
-            PropertyDTO dtoProperty = _mapper.Map<Property>(prop);
+            PropertyDTO dtoProperty = _mapper.Map<PropertyDTO>(prop);
             return dtoProperty;
         }
-
-
-
 
     }
 }

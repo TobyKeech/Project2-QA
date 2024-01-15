@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Project2.Models
 {
@@ -10,6 +12,8 @@ namespace Project2.Models
             Bookings = new HashSet<Booking>();
         }
 
+        [Column("PropertyId")]
+        [Key]
         public int PropertyId { get; set; }
         public string Address { get; set; } = null!;
         public string Postcode { get; set; } = null!;
