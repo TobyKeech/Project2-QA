@@ -1,15 +1,20 @@
-﻿using System;
+﻿using Project2.Business.DTO;
+using Project2.Persistence.Repositories.Contracts;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Project2.Models
 {
-    public partial class Seller
+    public partial class Seller : EntityBase, IEquatable<Seller>, ICloneable
     {
         public Seller()
         {
-            Properties = new HashSet<Property>();
+            //Properties = new HashSet<Property>();
         }
 
+        [Key]
+        public override int Id { get; set; }
         public int SellerId { get; set; }
         public string FirstName { get; set; } = null!;
         public string Surname { get; set; } = null!;
@@ -18,5 +23,25 @@ namespace Project2.Models
         public string Phone { get; set; } = null!;
 
         public virtual ICollection<Property> Properties { get; set; }
+
+        public object Clone()
+        {
+            return new SellerDTO
+            {
+                Id = this.Id,
+                SellerId = this.SellerId,
+                FirstName = this.FirstName,
+                Surname = this.Surname,
+                Address = this.Address,
+                Postcode = this.Postcode,
+                Phone = this.Phone,
+                Properties = this.Properties
+            };
+        }
+
+        public bool Equals(Seller? other)
+        {
+            return Id == other.Id;
+        }
     }
 }
