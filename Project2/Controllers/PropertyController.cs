@@ -24,7 +24,6 @@ namespace Project2.Controllers
         }
 
 
-
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -35,7 +34,12 @@ namespace Project2.Controllers
         }
 
 
-
+        [HttpGet("Address/{address}")]
+        public IQueryable<PropertyDTO> GetByName(string address)
+        {
+            var properties = _propertyService.FindByName(address);
+            return properties;
+        }
 
 
 
