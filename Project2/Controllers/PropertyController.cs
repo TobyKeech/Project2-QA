@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Project2.Business.DTO;
 using Project2.Business.Services;
+using System.Net;
 
 namespace Project2.Controllers
 {
@@ -16,6 +17,7 @@ namespace Project2.Controllers
             _propertyService = propertyService;
         }
 
+        //Get all properties
         [HttpGet]
         public IEnumerable<PropertyDTO> Index()
         {
@@ -23,7 +25,7 @@ namespace Project2.Controllers
             return property;
         }
 
-
+        //Get property by id
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -33,7 +35,7 @@ namespace Project2.Controllers
             return property == null ? NotFound() : property;
         }
 
-
+        //Get property by address
         [HttpGet("Address/{address}")]
         public IQueryable<PropertyDTO> GetByName(string address)
         {
@@ -41,12 +43,41 @@ namespace Project2.Controllers
             return properties;
         }
 
+        //Add property
+        [HttpPost()]
+        public PropertyDTO AddProperty(PropertyDTO property)
+        {
+            property = _propertyService.Create(property);
+            //_propertyService.Save();
+            return property;
+        }
 
 
+        // UPDATE: Property
+        [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public ActionResult<PropertyDTO> UpdateProperty(PropertyDTO property)
+        {
 
+            property = _propertyService.Update(property);
+            // _propertyService.Save();
+            return property;
+        }
 
-
-
+        //Delete property via id
+        [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public HttpStatusCode DeleteProperty(int id)
+        {
+            var property = _propertyService.FindById(id);
+            if (property == null)
+                return HttpStatusCode.NotFound;
+            _propertyService.Delete(property);
+            // _propertyService();
+            return HttpStatusCode.NoContent;
+        }
 
 
 
