@@ -26,10 +26,8 @@
 
   <ItemGroup>
     <Folder Include="Business\DTO\" />
-    <Folder Include="Business\Services\" />
     <Folder Include="Controllers\" />
     <Folder Include="Persistence\Models\" />
-    <Folder Include="Persistence\Repositories\" />
   </ItemGroup>
 
 </Project>
