@@ -1,9 +1,14 @@
 using Microsoft.EntityFrameworkCore;
+using Project2.Business.Services;
 using Project2.EF;
+using Project2.Persistence.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<ISellerService, SellerService>();
+builder.Services.AddScoped<ISellerRepository, SellerRepository>();
+builder.Services.AddAutoMapper(typeof(Program));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
