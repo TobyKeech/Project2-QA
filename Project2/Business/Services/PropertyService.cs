@@ -3,16 +3,18 @@ using Project2.Business.DTO;
 using Project2.Models;
 using Project2.Persistence.Repositories;
 using System.Linq.Expressions;
+
+
 namespace Project2.Business.Services
 {
     public class PropertyService : IPropertyService
     {
 
-        IPropertyService _propertyService;
+        IPropertyRepository _propertyrepository;
         private IMapper _mapper;
 
 
-        public PropertyService(IPropertyService repository, IMapper mapper)
+        public PropertyService(IPropertyRepository repository, IMapper mapper)
         {
             _propertyService = repository;
             _mapper = mapper;
@@ -48,7 +50,7 @@ namespace Project2.Business.Services
             return dtoGenres.AsQueryable<GenreDTO>();
         }
 
-        public GenreDTO Create(GenreDTO dtoGenre)
+        public PropertyDTO Create(PropertyDTO dtoProperty)
         {
             Genre genreData = _mapper.Map<Genre>(dtoGenre);
             genreData = _genrerepository.Create(genreData);
@@ -56,31 +58,31 @@ namespace Project2.Business.Services
             return dtoGenre;
         }
 
-        public void Delete(GenreDTO dtoGenre)
+        public void Delete(Property dtoProperty)
         {
             Genre genre = _mapper.Map<Genre>(dtoGenre);
             _genrerepository.Delete(genre);
         }
 
-        public IQueryable<GenreDTO> FindByCondition(Expression<Func<GenreDTO, bool>> expression)
+        public IQueryable<PropertyDTO> FindByCondition(Expression<Func<PropertyDTO, bool>> expression)
         {
-            Genre genreData = _mapper.Map<Genre>(expression);
+            Property propertyData = _mapper.Map<Property>(expression);
             //return _repository.FindByCondition(movieData);
             return null;
         }
 
-        public GenreDTO Update(GenreDTO genre)
+        public PropertyDTO Update(PropertyDTO property)
         {
-            Genre genreData = _mapper.Map<Genre>(genre);
-            var g = _genrerepository.FindById(genreData.Id);
-            if (g == null)
+            Property propertyData = _mapper.Map<Property>(property);
+            var p = _propertyrepository.FindById(propertyData.Id);
+            if (p == null)
                 return null;
 
-            g.GenreName = genreData.GenreName;
+            p.PropertyAddress = propertyData.Address;
 
-            Genre gen = _genrerepository.Update(g);
-            GenreDTO dtoGenre = _mapper.Map<GenreDTO>(gen);
-            return dtoGenre;
+            Property prop = _propertyrepository.Update(p);
+            PropertyDTO dtoProperty = _mapper.Map<Property>(prop);
+            return dtoProperty;
         }
 
 
