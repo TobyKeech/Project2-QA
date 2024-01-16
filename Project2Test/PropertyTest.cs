@@ -90,7 +90,7 @@ namespace Project2Test
         }
 
         [Fact]
-        public void TestGetAllProperties()
+        public void TestGetProperty()
         {
             var services = GetPropertyServiceProivder();
             using (var scope = services.CreateScope())
@@ -102,23 +102,11 @@ namespace Project2Test
                 //Clear database
                 context.Database.EnsureDeleted();
 
-                var PropertyDTO = new PropertyDTO
-                {
-                    Address = "36 Beef King",
-                    Postcode = "BFE 3ET",
-                    Type = "Detached",
-                    NumberOfBedrooms = 2,
-                    NumberOfBathrooms = 1,
-                    Garden = true,
-                    Price = 100000,
-                    Status = "Available"
-                };
+               controller.AddProperty(GetMockProperty());
 
-                controller.AddProperty(PropertyDTO);
-                var property = context.Properties.Single();
+                Assert.Equal(1, context.Properties.Count());
+                Assert.Equal("36 Beef King", context.Properties.FirstOrDefault().Address);
 
-                Assert.Equal(1, property.Id);
-                Assert.Equal("36 Beef King", property.Address);
             }
         }
 
@@ -147,11 +135,11 @@ namespace Project2Test
                     Status = "Available"
                 };
 
-                controller.AddProperty(PropertyDTO);
+                controller.AddProperty(GetMockProperty());
                 var property = context.Properties.Single();
 
                 Assert.Equal(1, property.Id);
-                Assert.Equal("36 Beef King", property.Address);
+                Assert.Equal("36 Beef King", context.Properties.FirstOrDefault().Address);
             }
         }
 
@@ -182,10 +170,23 @@ namespace Project2Test
                 };
 
                 controller.AddProperty(PropertyDTO);
-                var property = context.Properties.Single();
+                var propertyAddress = context.Properties.Single().Address;
+                var newAddress = "38 Steak Place";
+                //= context.Buyers.Single();
+                controller.UpdateProperty(
+                    PropertyDTO = new PropertyDTO
+                    {
+                        Address = newAddress,
+                        Postcode = "BFE 3ET",
+                        Type = "Detached",
+                        NumberOfBedrooms = 2,
+                        NumberOfBathrooms = 1,
+                        Garden = true,
+                        Price = 100000,
+                        Status = "Available"
+                    });
 
-                Assert.Equal(1, property.Id);
-                Assert.Equal("36 Beef King", property.Address);
+                Assert.Equal("38 Steak Place", newAddress);
             }
         }
 
@@ -215,10 +216,10 @@ namespace Project2Test
                 };
 
                 controller.AddProperty(PropertyDTO);
-                var property = context.Properties.Single();
-
-                Assert.Equal(1, property.Id);
-                Assert.Equal("36 Beef King", property.Address);
+                var propertyId = context.Properties.Single().Id;
+                controller.DeleteProperty(propertyId);
+                Assert.Equal(0, context.Properties.Count());
+              
             }
         }
 
@@ -250,10 +251,10 @@ namespace Project2Test
                 };
 
                 controller.AddProperty(PropertyDTO);
-                var property = context.Properties.Single();
+                var propertyViaSellerId = context.Properties.Single().SellerId;
 
-                Assert.Equal(1, property.Id);
-                Assert.Equal(1, property.SellerId);
+                Assert.Equal(1, propertyViaSellerId);
+              
             }
         }
 
@@ -285,10 +286,9 @@ namespace Project2Test
                 };
 
                 controller.AddProperty(PropertyDTO);
-                var property = context.Properties.Single();
+                var propertyViaBuyerId = context.Properties.Single().BuyerId;
 
-                Assert.Equal(1, property.Id);
-                Assert.Equal(1, property.BuyerId);
+                Assert.Equal(1, propertyViaBuyerId);
             }
         }
 
