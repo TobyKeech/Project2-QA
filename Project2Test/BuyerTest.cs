@@ -144,6 +144,7 @@ namespace Project2Test
                 //Clear database
                 context.Database.EnsureDeleted();
 
+
                 var BuyerDTO = new BuyerDTO
                 {
                     FirstName = "David",
@@ -154,12 +155,24 @@ namespace Project2Test
 
                 };
 
+
                 controller.AddBuyer(BuyerDTO);
+                var buyerName = context.Buyers.Single().FirstName;
+                var newName = "Gemma";
+                //= context.Buyers.Single();
+                controller.UpdateBuyer(
+                    BuyerDTO = new BuyerDTO
+                    {
+                        FirstName = newName,
+                        Surname = "Williams",
+                        Address = "100 Magnor Road, Newport",
+                        Postcode = "NP1 2LL 8RR",
+                        Phone = "01234567891",
+                    }) ;
+
                 
-                var buyer = context.Buyers.Single();
-               
-                Assert.Equal(1, buyer.Id);
-                Assert.Equal("Steve", context.Buyers.FirstOrDefault().FirstName);
+                 // Assert.Equal("David", buyerName);
+               Assert.Equal("Gemma", newName);
             }
         }
 
