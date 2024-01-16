@@ -7,16 +7,13 @@ namespace Project2.Business.Services
     {
         public TPCAutoMapper()
         {
-
-
             CreateMap<Buyer, BuyerDTO>();
-
             CreateMap<BuyerDTO, Buyer>();
-            CreateMap<Property, PropertyDTO>();
 
+            CreateMap<Property, PropertyDTO>();
             CreateMap<PropertyDTO, Property>();
             
-             CreateMap<Seller, SellerDTO>();
+            CreateMap<Seller, SellerDTO>();
             CreateMap<SellerDTO, Seller>();
         }
     }
