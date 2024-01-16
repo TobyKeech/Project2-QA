@@ -1,18 +1,14 @@
-﻿using Project2.Business.DTO;
+﻿using Microsoft.AspNetCore.Mvc;
+using Project2.Models;
 using Project2.Persistence.Repositories.Contracts;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Project2.Models
+namespace Project2.Business.DTO
 {
-    public partial class Seller : EntityBase, IEquatable<Seller>, ICloneable
+    public class SellerDTO : EntityBase, IEquatable<SellerDTO>
     {
-        public Seller()
-        {
-            //Properties = new HashSet<Property>();
-        }
+        public SellerDTO() { }
 
         [Column("SELLER_ID")]
         [Key]
@@ -25,6 +21,11 @@ namespace Project2.Models
         public string Phone { get; set; } = null!;
 
         public virtual ICollection<Property> Properties { get; set; }
+
+        public bool Equals(SellerDTO? other)
+        {
+            return Id == other.Id;
+        }
 
         public object Clone()
         {
@@ -39,12 +40,6 @@ namespace Project2.Models
                 Phone = this.Phone,
                 Properties = this.Properties
             };
-        }
-
-        public bool Equals(Seller? other)
-        {
-            return Id == other.Id;
-            //return SellerId == other.SellerId;
         }
     }
 }
