@@ -1,4 +1,5 @@
-﻿using Project2.Persistence.Repositories.Contracts;
+﻿using Project2.Models;
+using Project2.Persistence.Repositories.Contracts;
 using System.ComponentModel.DataAnnotations;
 
 namespace Project2.Business.DTO
@@ -23,7 +24,7 @@ namespace Project2.Business.DTO
         public string Phone { get; set; }
 
 
-        //public virtual ICollection<MovieGenre> MovieGenres { get; set; }
+        public virtual ICollection<Booking> Bookings{ get; set; }
 
         //public virtual ICollection<ProductionCompany> Companies { get; set; }
 
