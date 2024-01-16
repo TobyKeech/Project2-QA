@@ -26,6 +26,7 @@ namespace Project2.Controllers
             return seller;
         }
 
+        //Find seller by Id
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -35,22 +36,49 @@ namespace Project2.Controllers
             return seller == null ? NotFound() : seller;
         }
 
+        //Find by name
+        [HttpGet("Seller/{name}")]
+        public IQueryable<SellerDTO> GetByName(string name)
+        {
+            var seller = _sellerService.FindByName(name);
+            return seller; 
+                //== null ? NotFound() : seller;
+        }
+
         // POST api/<SellerController>
-        /*[HttpPost]
-        public void Post([FromBody] string value)
+        //Create Seller
+        [HttpPost()]
+        public SellerDTO AddSeller(SellerDTO seller)
         {
+            seller = _sellerService.Create(seller);
+            //_sellerService.Save();
+            return seller;
         }
 
-        // PUT api/<SellerController>/5
+        //Update Seller
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public ActionResult<SellerDTO> UpdateSeller(SellerDTO seller)
         {
+
+            seller = _sellerService.Update(seller);
+            return seller;
         }
 
-        // DELETE api/<SellerController>/5
+        //Selete Seller
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public HttpStatusCode DeleteSeller(int id)
         {
-        }*/
+            var seller = _sellerService.FindById(id);
+            if (seller == null)
+                return HttpStatusCode.NotFound;
+
+            _sellerService.Delete(seller);
+            //_sellerService.Save();
+            return HttpStatusCode.NoContent;
+        }
     }
 }

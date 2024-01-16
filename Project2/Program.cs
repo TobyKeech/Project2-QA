@@ -4,9 +4,9 @@ using Project2.EF;
 using Project2.Persistence.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
-
 // Add services to the container.
-
+builder.Services.AddScoped<IBuyerService, BuyerService>();
+builder.Services.AddScoped<IBuyerRepository, BuyerRepository>();
 builder.Services.AddScoped<ISellerService, SellerService>();
 builder.Services.AddScoped<ISellerRepository, SellerRepository>();
 builder.Services.AddScoped<IPropertyService, PropertyService>();
