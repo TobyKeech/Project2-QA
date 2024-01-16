@@ -12,6 +12,12 @@ namespace Project2.Business.Services
         IBookingRepository _bookingRepository;
         private IMapper _mapper;
 
+        public BookingService(IBookingRepository repository, IMapper mapper)
+        {
+            _bookingRepository = repository;
+            _mapper = mapper;
+        }
+
         public BookingDTO Create(BookingDTO dtoBooking)
         {
             Booking bookingData = _mapper.Map<Booking>(dtoBooking);

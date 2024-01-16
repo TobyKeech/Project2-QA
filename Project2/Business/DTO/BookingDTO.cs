@@ -18,7 +18,7 @@ namespace Project2.Business.DTO
         public int BuyerId { get { return Id; } set { Id = value; } }
 
         public int PropertyId { get { return Id; } set { Id = value; } }
-        public string Time { get; set; }
+        public DateTime Time { get; set; }
 
         public bool Equals(BookingDTO? other)
         {

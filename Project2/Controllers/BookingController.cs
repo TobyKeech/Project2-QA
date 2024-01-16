@@ -24,13 +24,13 @@ namespace Project2.Controllers
             return booking;
         }
         //Find booking by Id
-        //[HttpGet("{id}")]
-        //[ProducesResponseType(StatusCodes.Status200OK)]
-        //[ProducesResponseType(StatusCodes.Status404NotFound)]
-        //public ActionResult<BookingDTO> GetById(int id)
-        //{
-        //    var booking = _bookingService.FindById(id);
-        //    return booking == null ? NotFound() : booking;
-        //}
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public ActionResult<BookingDTO> GetById(int id)
+        {
+            var booking = _bookingService.FindById(id);
+            return booking == null ? NotFound() : booking;
+        }
     }
 }
