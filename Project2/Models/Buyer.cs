@@ -12,8 +12,6 @@ namespace Project2.Models
         {
             // Bookings = new HashSet<Booking>();
             // Properties = new HashSet<Property>();
-            //  Bookings = new HashSet<Booking>();
-            // Properties = new HashSet<Property>();
         }
 
         [Column("BuyerId")]
