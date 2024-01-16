@@ -11,6 +11,7 @@ namespace Project2.Models
        // public Property()
        // {
        //     Bookings = new HashSet<Booking>();
+       //     booking set that can be tried when booking is carted
        // }
 
         [Column("Property_Id")]
@@ -30,7 +31,8 @@ namespace Project2.Models
         //public virtual Buyer? Buyer { get; set; }
         //public virtual Seller Seller { get; set; } = null!;
        // public virtual ICollection<Booking> Bookings { get; set; }
-
+       
+       //certian areas of the code are commented out as they are not needed for the project currently
         public object Clone()
         {
             return new Property

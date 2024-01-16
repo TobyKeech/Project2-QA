@@ -58,6 +58,8 @@ namespace Project2.EF
                 //    .HasForeignKey(d => d.PropertyId)
                 //    .OnDelete(DeleteBehavior.ClientSetNull)
                 //   .HasConstraintName("booking$booking_ibfk_2");
+
+                //this is created from the database and has created a key for the booking table which doesnt not currenyl exist in the file, was needed to generate the routes to work
             });
 
             modelBuilder.Entity<Buyer>(entity =>
