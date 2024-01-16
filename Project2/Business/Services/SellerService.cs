@@ -37,9 +37,9 @@ namespace Project2.Business.Services
             return dtoSeller;
         }
 
-        public IQueryable<SellerDTO> FindByName(string firstName)
+        public IQueryable<SellerDTO> FindByName(string Name)
         {
-            IQueryable<Seller> sellers = _sellerRepository.FindByCondition(b => b.FirstName == firstName);
+            IQueryable<Seller> sellers = _sellerRepository.FindByCondition(b => b.FirstName.ToUpper().Contains(Name.ToUpper()) || b.Surname.ToUpper().Contains(Name.ToUpper()));
             List<SellerDTO> dtoSellers = new List<SellerDTO>();
             foreach (Seller seller in sellers)
             {
@@ -70,7 +70,6 @@ namespace Project2.Business.Services
             if (s == null)
                 return null;
 
-            //s.SellerId = sellerData.SellerId;
             s.FirstName = sellerData.FirstName;
             s.Surname = sellerData.Surname;
             s.Address = sellerData.Address;
