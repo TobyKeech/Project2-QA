@@ -79,6 +79,13 @@ namespace Project2.Business.Services
                 return null;
 
             p.Address = propertyData.Address;
+            p.Postcode = propertyData.Postcode;
+            p.Type = propertyData.Type;
+            p.NumberOfBedrooms = propertyData.NumberOfBedrooms;
+            p.NumberOfBathrooms = propertyData.NumberOfBathrooms;
+            p.Garden = propertyData.Garden;
+            p.Price = propertyData.Price;
+            p.Status = propertyData.Status;
 
             Property prop = _propertyrepository.Update(p);
             PropertyDTO dtoProperty = _mapper.Map<PropertyDTO>(prop);
