@@ -133,7 +133,7 @@ namespace Project2Test
         }
 
         [Fact]
-        public void UpdateBuyer()
+        public void TestUpdateBuyer()
         {
             var services = GetBuyerServiceProivder();
             using (var scope = services.CreateScope())
