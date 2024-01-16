@@ -47,17 +47,19 @@ namespace Project2.EF
                     .HasColumnType("datetime")
                     .HasColumnName("TIME");
 
-                entity.HasOne(d => d.Buyer)
-                    .WithMany(p => p.Bookings)
-                    .HasForeignKey(d => d.BuyerId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("booking$booking_ibfk_1");
+                //  entity.HasOne(d => d.Buyer)
+                //    .WithMany(p => p.Bookings)
+                //    .HasForeignKey(d => d.BuyerId)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("booking$booking_ibfk_1");
 
-                entity.HasOne(d => d.Property)
-                    .WithMany(p => p.Bookings)
-                    .HasForeignKey(d => d.PropertyId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("booking$booking_ibfk_2");
+                // entity.HasOne(d => d.Property)
+                //    .WithMany(p => p.Bookings)
+                //    .HasForeignKey(d => d.PropertyId)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //   .HasConstraintName("booking$booking_ibfk_2");
+
+                //this is created from the database and has created a key for the booking table which doesnt not currenyl exist in the file, was needed to generate the routes to work
             });
 
             modelBuilder.Entity<Buyer>(entity =>
@@ -91,7 +93,7 @@ namespace Project2.EF
             {
                 entity.ToTable("property");
 
-                entity.Property(e => e.PropertyId).HasColumnName("PROPERTY_ID");
+                entity.Property(e => e.Id).HasColumnName("PROPERTY_ID");
 
                 entity.Property(e => e.Address)
                     .HasMaxLength(255)
@@ -126,16 +128,16 @@ namespace Project2.EF
                     .HasMaxLength(9)
                     .HasColumnName("TYPE");
 
-                entity.HasOne(d => d.Buyer)
-                    .WithMany(p => p.Properties)
-                    .HasForeignKey(d => d.BuyerId)
-                    .HasConstraintName("property$property_ibfk_2");
+                // entity.HasOne(d => d.Buyer)
+                //    .WithMany(p => p.Properties)
+                //    .HasForeignKey(d => d.BuyerId)
+                //    .HasConstraintName("property$property_ibfk_2");
 
-                entity.HasOne(d => d.Seller)
-                    .WithMany(p => p.Properties)
-                    .HasForeignKey(d => d.SellerId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("property$property_ibfk_1");
+                //entity.HasOne(d => d.Seller)
+                //   .WithMany(p => p.Properties)
+                //   .HasForeignKey(d => d.SellerId)
+                //   .OnDelete(DeleteBehavior.ClientSetNull)
+                //   .HasConstraintName("property$property_ibfk_1");
             });
 
             modelBuilder.Entity<Seller>(entity =>
