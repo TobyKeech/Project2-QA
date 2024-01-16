@@ -222,5 +222,75 @@ namespace Project2Test
             }
         }
 
+        [Fact]
+        public void TestGetPropertiesBySellerId()
+        {
+            var services = GetPropertyServiceProivder();
+            using (var scope = services.CreateScope())
+            {
+                var repo = scope.ServiceProvider.GetService<IPropertyRepository>();
+                var service = new PropertyService(repo, _mapper);
+                var context = scope.ServiceProvider.GetService<EstateContext>();
+                var controller = new PropertyController(service);
+                //Clear database
+                context.Database.EnsureDeleted();
+
+                var PropertyDTO = new PropertyDTO
+                {
+                    Address = "36 Beef King",
+                    Postcode = "BFE 3ET",
+                    Type = "Detached",
+                    NumberOfBedrooms = 2,
+                    NumberOfBathrooms = 1,
+                    Garden = true,
+                    Price = 100000,
+                    Status = "Available",
+                    SellerId = 1,
+                    BuyerId = 1
+                };
+
+                controller.AddProperty(PropertyDTO);
+                var property = context.Properties.Single();
+
+                Assert.Equal(1, property.Id);
+                Assert.Equal(1, property.SellerId);
+            }
+        }
+
+        [Fact]
+        public void TestGetPropertiesByBuyerId()
+        {
+            var services = GetPropertyServiceProivder();
+            using (var scope = services.CreateScope())
+            {
+                var repo = scope.ServiceProvider.GetService<IPropertyRepository>();
+                var service = new PropertyService(repo, _mapper);
+                var context = scope.ServiceProvider.GetService<EstateContext>();
+                var controller = new PropertyController(service);
+                //Clear database
+                context.Database.EnsureDeleted();
+
+                var PropertyDTO = new PropertyDTO
+                {
+                    Address = "36 Beef King",
+                    Postcode = "BFE 3ET",
+                    Type = "Detached",
+                    NumberOfBedrooms = 2,
+                    NumberOfBathrooms = 1,
+                    Garden = true,
+                    Price = 100000,
+                    Status = "Available",
+                    SellerId = 1,
+                    BuyerId = 1
+                };
+
+                controller.AddProperty(PropertyDTO);
+                var property = context.Properties.Single();
+
+                Assert.Equal(1, property.Id);
+                Assert.Equal(1, property.BuyerId);
+            }
+        }
+
     }
 }
