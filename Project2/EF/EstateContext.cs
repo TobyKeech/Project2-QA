@@ -37,7 +37,7 @@ namespace Project2.EF
             {
                 entity.ToTable("booking");
 
-                entity.Property(e => e.BookingId).HasColumnName("BOOKING_ID");
+                entity.Property(e => e.Id).HasColumnName("BOOKING_ID");
 
                 entity.Property(e => e.BuyerId).HasColumnName("BUYER_ID");
 

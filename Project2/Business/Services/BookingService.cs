@@ -7,7 +7,7 @@ using Project2.Persistence.Repositories;
 
 namespace Project2.Business.Services
 {
-    public class BookinigService : IBookingService
+    public class BookingService : IBookingService
     {
         IBookingRepository _bookingRepository;
         private IMapper _mapper;
@@ -47,7 +47,7 @@ namespace Project2.Business.Services
         public BookingDTO Update(BookingDTO booking)
         {
             Booking bookingData = _mapper.Map<Booking>(booking);
-            var b = _bookingRepository.FindById(bookingData.BookingId);
+            var b = _bookingRepository.FindById(bookingData.Id);
             if (b == null)
                 return null;
 
