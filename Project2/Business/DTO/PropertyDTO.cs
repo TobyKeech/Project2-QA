@@ -8,7 +8,7 @@ namespace Project2.Business.DTO
     {
         public PropertyDTO()
         {
-            Bookings = new HashSet<BookingDTO>();
+            //Bookings = new HashSet<BookingDTO>();
         }
 
 
@@ -25,11 +25,29 @@ namespace Project2.Business.DTO
         public int SellerId { get; set; }
         public int? BuyerId { get; set; }
 
-        public virtual ICollection<BookingDTO>? Bookings { get; set; }
+        //public virtual ICollection<BookingDTO>? Bookings { get; set; }
 
         public bool Equals(PropertyDTO? other)
         {
             return Id == other.Id;
+        }
+
+        public object Clone()
+        {
+            return new Property
+            {
+                Id = this.Id,
+                Address = this.Address,
+                Postcode = this.Postcode,
+                Type = this.Type,
+                NumberOfBedrooms = this.NumberOfBedrooms,
+                NumberOfBathrooms = this.NumberOfBathrooms,
+                Garden = this.Garden,
+                Price = this.Price,
+                Status = this.Status,
+                SellerId = this.SellerId,
+                BuyerId = this.BuyerId
+            };
         }
 
     }

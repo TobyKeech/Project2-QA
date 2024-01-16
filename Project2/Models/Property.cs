@@ -8,10 +8,10 @@ namespace Project2.Models
 {
     public partial class Property : EntityBase, IEquatable<Property>
     {
-        public Property()
-        {
-            Bookings = new HashSet<Booking>();
-        }
+       // public Property()
+       // {
+       //     Bookings = new HashSet<Booking>();
+       // }
 
         [Column("Property_Id")]
         [Key]
@@ -27,9 +27,27 @@ namespace Project2.Models
         public int SellerId { get; set; }
         public int? BuyerId { get; set; }
 
-        public virtual Buyer? Buyer { get; set; }
-        public virtual Seller Seller { get; set; } = null!;
-        public virtual ICollection<Booking> Bookings { get; set; }
+        //public virtual Buyer? Buyer { get; set; }
+        //public virtual Seller Seller { get; set; } = null!;
+       // public virtual ICollection<Booking> Bookings { get; set; }
+
+        public object Clone()
+        {
+            return new Property
+            {
+                Id = this.Id,
+                Address = this.Address,
+                Postcode = this.Postcode,
+                Type = this.Type,
+                NumberOfBedrooms = this.NumberOfBedrooms,
+                NumberOfBathrooms = this.NumberOfBathrooms,
+                Garden = this.Garden,
+                Price = this.Price,
+                Status = this.Status,
+                SellerId = this.SellerId,
+                BuyerId = this.BuyerId
+            };
+        }
 
         public bool Equals(Property? other)
         {
