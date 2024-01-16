@@ -103,11 +103,11 @@ namespace Project2Test
                    
                 };
 
-                controller.AddBuyer(BuyerDTO);
+                controller.AddBuyer(GetMockBuyer());
                 var buyer = context.Buyers.Single();
 
                 Assert.Equal(1, buyer.Id);
-                Assert.Equal("100 Magnor Road, Newport", buyer.Address);
+                Assert.Equal("Steve", context.Buyers.FirstOrDefault().FirstName);
             }
         }
         [Fact]
@@ -145,22 +145,14 @@ namespace Project2Test
                 //Clear database
                 context.Database.EnsureDeleted();
 
-                var BuyerDTO = new BuyerDTO
-                {
-                    FirstName = "David",
-                    Surname = "Williams",
-                    Address = "100 Magnor Road, Newport",
-                    Postcode = "NP1 2LL V8RR",
-                    Phone = "01234567891",
+                
 
-                };
-
-                controller.AddBuyer(BuyerDTO);
+                controller.AddBuyer(GetMockBuyer());
                 
                 var buyer = context.Buyers.Single();
                
                 Assert.Equal(1, buyer.Id);
-                Assert.Equal("100 Magnor Road, Newport", buyer.Address);
+                Assert.Equal("Steve", context.Buyers.FirstOrDefault().FirstName);
             }
         }
 
@@ -177,21 +169,13 @@ namespace Project2Test
                 //Clear database
                 context.Database.EnsureDeleted();
 
-                var BuyerDTO = new BuyerDTO
-                {
-                    FirstName = "David",
-                    Surname = "Williams",
-                    Address = "100 Magnor Road, Newport",
-                    Postcode = "NP1 2LL V8RR",
-                    Phone = "01234567891",
+                
 
-                };
-
-                controller.AddBuyer(BuyerDTO);
+                controller.AddBuyer(GetMockBuyer());
                 var buyer = context.Buyers.Single();
 
                 Assert.Equal(1, buyer.Id);
-                Assert.Equal("100 Magnor Road, Newport", buyer.Address);
+                Assert.Equal("Steve", context.Buyers.FirstOrDefault().FirstName);
             }
         }
     }
