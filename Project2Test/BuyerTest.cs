@@ -92,7 +92,6 @@ namespace Project2Test
                 var controller = new BuyerController(service);
                 //Clear database
                 context.Database.EnsureDeleted();
-
                 var BuyerDTO = new BuyerDTO
                 {
                     FirstName = "David",
@@ -100,7 +99,7 @@ namespace Project2Test
                     Address = "100 Magnor Road, Newport",
                     Postcode = "NP1 2LL 8RR",
                     Phone = "01234567891",
-                   
+
                 };
 
                 controller.AddBuyer(GetMockBuyer());
@@ -145,9 +144,17 @@ namespace Project2Test
                 //Clear database
                 context.Database.EnsureDeleted();
 
-                
+                var BuyerDTO = new BuyerDTO
+                {
+                    FirstName = "David",
+                    Surname = "Williams",
+                    Address = "100 Magnor Road, Newport",
+                    Postcode = "NP1 2LL 8RR",
+                    Phone = "01234567891",
 
-                controller.AddBuyer(GetMockBuyer());
+                };
+
+                controller.AddBuyer(BuyerDTO);
                 
                 var buyer = context.Buyers.Single();
                
@@ -169,13 +176,23 @@ namespace Project2Test
                 //Clear database
                 context.Database.EnsureDeleted();
 
-                
+                var BuyerDTO = new BuyerDTO
+                {
+                    FirstName = "David",
+                    Surname = "Williams",
+                    Address = "100 Magnor Road, Newport",
+                    Postcode = "NP1 2LL 8RR",
+                    Phone = "01234567891",
 
-                controller.AddBuyer(GetMockBuyer());
-                var buyer = context.Buyers.Single();
+                };
 
-                Assert.Equal(1, buyer.Id);
-                Assert.Equal("Steve", context.Buyers.FirstOrDefault().FirstName);
+
+                controller.AddBuyer(BuyerDTO);
+                var buyerId = context.Buyers.Single().Id;
+                    //= context.Buyers.Single();
+                controller.DeleteBuyer(buyerId);
+              //  Assert.Equal(1, buyer.Id);
+                Assert.Equal(0, context.Buyers.Count());
             }
         }
     }
