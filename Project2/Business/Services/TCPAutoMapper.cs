@@ -1,17 +1,36 @@
-﻿using Project2.Business.DTO;
+﻿using AutoMapper;
+
 using Project2.Models;
-using AutoMapper;
+
+using Project2.Business.DTO;
 
 namespace Project2.Business.Services
+
 {
-    public class TCPAutoMapper: Profile
+
+    public class TPCAutoMapper : Profile
+
     {
 
-        public TCPAutoMapper()
+        public TPCAutoMapper()
+
         {
+
+
             CreateMap<Buyer, BuyerDTO>();
+
             CreateMap<BuyerDTO, Buyer>();
+
+            CreateMap<Property, PropertyDTO>();
+
+            CreateMap<PropertyDTO, Property>();
+
+            CreateMap<Seller, SellerDTO>();
+
+            CreateMap<SellerDTO, Seller>();
+
         }
 
-     }
+    }
+
 }
