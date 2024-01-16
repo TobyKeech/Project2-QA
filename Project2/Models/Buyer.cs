@@ -10,9 +10,7 @@ namespace Project2.Models
     {
         public Buyer()
         {
-          // Bookings = new HashSet<Booking>();
-           // Properties = new HashSet<Property>();
-            //  Bookings = new HashSet<Booking>();
+            // Bookings = new HashSet<Booking>();
             // Properties = new HashSet<Property>();
         }
 

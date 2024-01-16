@@ -1,5 +1,3 @@
-
-
 USE [master]
 GO
 
@@ -130,6 +128,7 @@ Insert into dbo.seller values('David', 'Evans', '12 Low Street, Cardiff', 'CF1 1
 Insert into dbo.seller values('Emma', 'Clark', '13 Broad Street, Cardiff', 'CF1 1AL', '01234567812')
 Insert into dbo.seller values('Mark', 'White', '14 High Street, Cardiff', 'CF1 1AM', '01234567813')
 Insert into dbo.seller values('Oliva', 'Lee', '15 Main Street, Cardiff', 'CF1 1AN', '01234567814')
+GO
 
 Insert into dbo.buyer values('Alice', 'Johnson', '42 Pen-y-lan Road, Cardiff', 'CA1 8RR', '01234567890')
 Insert into dbo.buyer values('David', 'Williams', '100 Magnor Road, Newport', 'NP1 2LL 8RR', '01234567891')
@@ -146,6 +145,7 @@ Insert into dbo.buyer values('Ava', 'Evans', '22 Feather Lane, Newcastle', 'NE1 
 Insert into dbo.buyer values('Liam', 'White', '2 Yarn Road, Southampton', 'SO1 4KN', '01234567812')
 Insert into dbo.buyer values('Ella', 'Horse', '18 Stable Street, Cambridge', 'CB1 2HS', '01234567813')
 Insert into dbo.buyer values('Noah', 'Lee', '9 Whisker Way, Oxford', 'OX1 1PA', '01234567814')
+GO
 
 Insert into dbo.property values('34 OK Place, OK Town','OK1 OK', 'DETACHED',3,1,0,100000,'FOR SALE', 13, NULL)
 Insert into dbo.property values('22 Maple Street, Maple City','MC1 1MC', 'SEMI',4,2,0,150000,'FOR SALE',7,NULL)
@@ -159,7 +159,7 @@ Insert into dbo.property values('12 Willow Street, Willowvale','WV1 1WV', 'APART
 Insert into dbo.property values('18 Fir Street, Firfield','FF1 1FF', 'SEMI',4,2,1,180000,'FOR SALE',  14, NULL)
 Insert into dbo.property values('5 Redwood Street, Redwood City','RC1 1RC', 'DETACHED',5,3,1,220000,'SOLD', 11, 4)
 Insert into dbo.property values('18 Fir Street, Firfield','FF1 1FF', 'SEMI',4,2,1,150000,'SOLD', 1, 10)
-
+GO
 
 Insert into dbo.booking values(8, 12,'2023-03-03T15:45:00') 
 Insert into dbo.booking values(6, 2,'2023-03-05T15:45:00') 
@@ -176,3 +176,4 @@ Insert into dbo.booking values(6, 12,'2023-03-12T10:00:00')
 Insert into dbo.booking values(9, 5,'2023-03-13T14:30:00')
 Insert into dbo.booking values(11, 4,'2023-03-14T16:15:00')
 Insert into dbo.booking values(10, 9,'2023-12-31T00:00:00')
+GO
