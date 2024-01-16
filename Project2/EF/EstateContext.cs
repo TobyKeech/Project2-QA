@@ -66,7 +66,7 @@ namespace Project2.EF
             {
                 entity.ToTable("buyer");
 
-                entity.Property(e => e.BuyerId).HasColumnName("BUYER_ID");
+                entity.Property(e => e.Id).HasColumnName("BUYER_ID");
 
                 entity.Property(e => e.Address)
                     .HasMaxLength(255)
