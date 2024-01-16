@@ -6,8 +6,12 @@ using Project2.Persistence.Repositories;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
 builder.Services.AddScoped<ISellerService, SellerService>();
 builder.Services.AddScoped<ISellerRepository, SellerRepository>();
+builder.Services.AddScoped<IPropertyService, PropertyService>();
+builder.Services.AddScoped<IPropertyRepository, PropertyRepository>();
+
 builder.Services.AddAutoMapper(typeof(Program));
 
 builder.Services.AddControllers();
@@ -15,6 +19,8 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<EstateContext>(options =>
                 options.UseSqlServer(
                     builder.Configuration.GetConnectionString("estateagents")));
+
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
