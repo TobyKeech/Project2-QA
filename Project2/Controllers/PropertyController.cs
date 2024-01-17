@@ -6,7 +6,7 @@ using System.Net;
 
 namespace Project2.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class PropertyController : ControllerBase
     {
