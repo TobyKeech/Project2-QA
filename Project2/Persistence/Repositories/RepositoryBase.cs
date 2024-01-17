@@ -29,14 +29,12 @@ namespace Project2.Persistence.Repositories
         {
             _repositoryContext.Set<T>().Add(entity);
             _repositoryContext.SaveChanges();
-            //_repositoryContext.Dispose();
             return entity;
         }
         public T Update(T entity)
         {
             _repositoryContext.Set<T>().Update(entity);
             _repositoryContext.SaveChanges();
-            //_repositoryContext.Dispose();
             return entity;
         }
         public void Delete(T entity)
