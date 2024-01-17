@@ -1,7 +1,10 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Project2.Business.Services;
 using Project2.EF;
 using Project2.Persistence.Repositories;
+using System.Text;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins"; //Needed for Cors
 var builder = WebApplication.CreateBuilder(args);
@@ -22,9 +25,6 @@ builder.Services.AddDbContext<EstateContext>(options =>
                     builder.Configuration.GetConnectionString("estateagents")));
 
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
 // Cors allows client requests to be made from same (localhost) machine
 builder.Services.AddCors(options =>
 {
@@ -36,6 +36,23 @@ builder.Services.AddCors(options =>
         });
 });
 
+//JWT Authentication
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    options.RequireHttpsMetadata = false;
+    options.SaveToken = true;
+    options.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+    };
+});
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
@@ -50,6 +67,7 @@ app.UseCors(MyAllowSpecificOrigins);
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
