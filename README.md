@@ -72,6 +72,13 @@ To Create a c# API backend and connect it to a react frontend!
 
 # ${\textsf{\color{pink}Things to look at next iteration }}$ 👀 
 
+# ✨ ${\textsf{\color{pink}Issues Faced }}$ ✨ 
+🌺 Git merge conflicts.                                                                                                                                     
+🌺 Branch Deviations and general tidyness of these.                                                                                                                                          
+🌺 Passing information of backend to the frontend.
+🌺 Database first approach caused problems with relationships and foreign keys.                                                                                                                                     
+🌺 Delete Method-implementation of cascading delete.  
+
 # ✨ ${\textsf{\color{pink}Contributing }}$ ✨ 
 
 Project is an open-source project and we welcome contributions from the community.
