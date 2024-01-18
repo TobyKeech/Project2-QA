@@ -7,16 +7,18 @@ using System.Linq.Expressions;
 
 namespace Project2.Business.Services
 {
-    public class PropertyService : IPropertyService
+    public class PropertyService : IPropertyService 
     {
 
         IPropertyRepository _propertyrepository;
+        IBookingRepository _bookingRepository;
         private IMapper _mapper;
 
 
-        public PropertyService(IPropertyRepository repository, IMapper mapper)
+        public PropertyService(IPropertyRepository repository, IBookingRepository bookingRepository, IMapper mapper)
         {
             _propertyrepository = repository;
+            _bookingRepository = bookingRepository;
             _mapper = mapper;
         }
         public IQueryable<PropertyDTO> FindAll()
@@ -61,8 +63,20 @@ namespace Project2.Business.Services
         public void Delete(PropertyDTO dtoProperty)
         {
             Property property = _mapper.Map<Property>(dtoProperty);
+
+            //remove all bookings which have a matching PropertyId from DB
+            var bookings = _bookingRepository.FindAll().ToList();
+            foreach (Booking booking in bookings)
+            {
+                if (booking.PropertyId == dtoProperty.Id)
+                {
+                    _bookingRepository.Delete(booking);
+                }
+            }
             _propertyrepository.Delete(property);
         }
+        
+       
 
         public IQueryable<PropertyDTO> FindByCondition(Expression<Func<PropertyDTO, bool>> expression)
         {
