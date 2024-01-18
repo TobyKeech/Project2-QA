@@ -47,7 +47,7 @@ To Create a c# API backend and connect it to a react frontend!
 
 ## ${\textsf{\color{lightgreen} Day 1 }}$
 :hibiscus: Created the DbScript that genrates the tables in Microsoft SQL Server as well as create the queries to insert dummy data into the database.
-:hibiscus: Connected API project to the database and generated the Models for the backend application.                             
+:hibiscus: Connected API project to the database and generated the Models for the backend application.      
 :hibiscus: Created the controllers and DTOs (Data Transfer Object) and services for each model so that they can be used in the frontend. 
 
 ## ${\textsf{\color{lightgreen} Day 2 }}$                       
