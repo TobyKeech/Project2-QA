@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Project2.Business.DTO;
 using Project2.Business.Services;
 using System.Net;
@@ -6,6 +7,7 @@ using System.Net;
 
 namespace Project2.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class SellerController : ControllerBase
@@ -19,6 +21,7 @@ namespace Project2.Controllers
 
 
         // GET: api/<SellerController>
+        [AllowAnonymous]
         [HttpGet]
         public IEnumerable<SellerDTO> Index()
         {
@@ -27,6 +30,7 @@ namespace Project2.Controllers
         }
 
         //Find seller by Id
+        [AllowAnonymous]
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -37,6 +41,7 @@ namespace Project2.Controllers
         }
 
         //Find by name
+        [AllowAnonymous]
         [HttpGet("Seller/{name}")]
         public IQueryable<SellerDTO> GetByName(string name)
         {

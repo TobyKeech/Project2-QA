@@ -21,6 +21,7 @@ namespace Project2.EF
         public virtual DbSet<Buyer> Buyers { get; set; } = null!;
         public virtual DbSet<Property> Properties { get; set; } = null!;
         public virtual DbSet<Seller> Sellers { get; set; } = null!;
+        public virtual DbSet<User>? Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
