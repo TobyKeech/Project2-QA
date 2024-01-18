@@ -70,6 +70,12 @@ To Create a C# API backend and connect it to a React frontend!
 🌺 Going over presentation.                                                                                                                                          
 🌺 Presentation time.
 
+# ${\textsf{\color{#FF1493}Trello}}$ 
+
+![image](https://github.com/TobyKeech/Project2-QA/assets/72978574/b06bf3ba-19b3-43d4-b46f-3d742a023cb8)
+![image](https://github.com/TobyKeech/Project2-QA/assets/72978574/36202203-2c38-4262-97bc-c7f1e1d8c49c)
+
+
 # ${\textsf{\color{#FF1493}Things to look at next iteration }}$ 👀 
 
 # ✨ ${\textsf{\color{#FF1493}Issues Faced }}$ ✨ 
