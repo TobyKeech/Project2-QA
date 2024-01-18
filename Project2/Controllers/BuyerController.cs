@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Project2.Business.DTO;
 using Project2.Business.Services;
@@ -7,6 +8,7 @@ using System.Net;
 
 namespace Project2.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class BuyerController : ControllerBase
@@ -18,6 +20,7 @@ namespace Project2.Controllers
             _buyerService = service; 
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public IEnumerable<BuyerDTO> Index()
         {
@@ -26,6 +29,7 @@ namespace Project2.Controllers
         }
 
         // GET: Buyer/2
+        [AllowAnonymous]
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -36,6 +40,7 @@ namespace Project2.Controllers
         }
 
         // GET: Buyer/Name/ET
+        [AllowAnonymous]
         [HttpGet("Name/{title}")]
         public IQueryable<BuyerDTO> GetByName(string title)
         {

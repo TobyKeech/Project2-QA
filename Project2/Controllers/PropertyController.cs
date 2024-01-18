@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Project2.Business.DTO;
 using Project2.Business.Services;
@@ -6,6 +7,7 @@ using System.Net;
 
 namespace Project2.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PropertyController : ControllerBase
@@ -18,6 +20,7 @@ namespace Project2.Controllers
         }
 
         //Get all properties
+        [AllowAnonymous]
         [HttpGet]
         public IEnumerable<PropertyDTO> Index()
         {
@@ -26,6 +29,7 @@ namespace Project2.Controllers
         }
 
         //Get property by id
+        [AllowAnonymous]
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -36,6 +40,7 @@ namespace Project2.Controllers
         }
 
         //Get property by address
+        [AllowAnonymous]
         [HttpGet("Address/{address}")]
         public IQueryable<PropertyDTO> GetByName(string address)
         {
