@@ -7,10 +7,9 @@ To install the application, clone the repositor:
 
 <!-- start: code block --> 
 ## ✨  ${\textsf{\color{ #FF8E8E}Clone this repository }}$  ✨ 
- ```bash
 git clone https://github.com/TobyKeech/Project2-QA
 
- ```bash
+
 cd Project2
 
 
