@@ -177,3 +177,29 @@ Insert into dbo.booking values(9, 5,'2023-03-13T14:30:00')
 Insert into dbo.booking values(11, 4,'2023-03-14T16:15:00')
 Insert into dbo.booking values(10, 9,'2023-12-31T00:00:00')
 GO
+
+CREATE TABLE [user](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[password] [nvarchar](255) NOT NULL,
+	[username] [nvarchar](255) NOT NULL,
+ CONSTRAINT [PK_user_id] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+INSERT [user] ([password], [username]) VALUES (N'adminpass', N'admin')
+GO
+INSERT [user] ([password], [username]) VALUES (N'userpass', N'user')
+GO
+INSERT [user] ([password], [username]) VALUES (N'vasu123', N'vasu@gmail.com')
+GO
+INSERT [user] ([password], [username]) VALUES (N'gemma123', N'gemma@gmail.com')
+GO
+INSERT [user] ([password], [username]) VALUES (N'toby123', N'toby@gmail.com')
+GO
+INSERT [user] ([password], [username]) VALUES (N'eyitayo123', N'eyitayo@gmail.com')
+GO
+INSERT [user] ([password], [username]) VALUES (N'test123', N'test')
+GO
