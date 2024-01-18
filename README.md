@@ -56,7 +56,7 @@ To Create a c# API backend and connect it to a react frontend!
 
 ## ${\textsf{\color{lightgreen} Day 3 }}$                       
 :hibiscus: Finshed unit testing each contoller to ensure the backend works as intended - all CRUD functionality using XUint.                             
-:hibiscus: Started to connect each frontend with the API backend to select the most stable front end for the project - //SELECTION HERE.           
+:hibiscus: Started to connect each frontend with the API backend to select the most stable front end for the project - Toby's.           
 :hibiscus: Worked on incorporating JWT authentication into the project so that users can login and have permissions to see only certain components. 
 
 ## ${\textsf{\color{lightgreen} Day 4 }}$                       
