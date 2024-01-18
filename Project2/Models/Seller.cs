@@ -11,7 +11,7 @@ namespace Project2.Models
     {
         public Seller()
         {
-            //Properties = new HashSet<Property>();
+            Properties = new HashSet<Property>();
         }
 
         [Column("SELLER_ID")]
@@ -36,8 +36,7 @@ namespace Project2.Models
                 Surname = this.Surname,
                 Address = this.Address,
                 Postcode = this.Postcode,
-                Phone = this.Phone,
-                Properties = this.Properties
+                Phone = this.Phone   
             };
         }
 
