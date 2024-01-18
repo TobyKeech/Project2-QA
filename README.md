@@ -55,9 +55,9 @@ To Create a c# API backend and connect it to a react frontend!
 :hibiscus: Started unit testing each contoller to ensure the backend works as intended - all CRUD (Create, Read, Update and Delete) functionality, using XUnit. 
 
 ## ${\textsf{\color{lightgreen} Day 3 }}$                       
-:hibiscus: Finshed unit testing each contoller to ensure the backend works as intended - all CRUD functionality using XUint.                             
-:hibiscus: Started to connect each frontend with the API backend to select the most stable front end for the project - Toby's.           
-:hibiscus: Worked on incorporating JWT authentication into the project so that users can login and have permissions to see only certain components. 
+🌺 Finshed unit testing each contoller to ensure the backend works as intended - all CRUD functionality using XUint.                             
+🌺 Started to connect each frontend with the API backend to select the most stable front end for the project - Toby's.           
+🌺 Worked on incorporating JWT authentication into the project so that users can login and have permissions to see only certain components. 
 
 ## ${\textsf{\color{lightgreen} Day 4 }}$                       
 🌺 Added a login screen for authentication.                                                                                            
@@ -65,12 +65,13 @@ To Create a c# API backend and connect it to a react frontend!
 🌺 Started to create the presentation slides. 
 
 ## ${\textsf{\color{lightgreen} Day 5}}$                       
-:hibiscus: Last miniute structuring.                                                                                                                                     
-:hibiscus: Going over presentation.                                                                                                                                          
-:hibiscus: Presentation time.
+🌺 Last miniute structuring.                                                                                                                                     
+🌺 Going over presentation.                                                                                                                                          
+🌺 Presentation time.
 
-# Things to look at next iteration 👀 :eyes:
-#✨ ${\textsf{\color{pink}Contributing }}$ ✨ 
+# ${\textsf{\color{pink}Things to look at next iteration }}$ 👀 
+
+# ✨ ${\textsf{\color{pink}Contributing }}$ ✨ 
 
 Project is an open-source project and we welcome contributions from the community.
 
