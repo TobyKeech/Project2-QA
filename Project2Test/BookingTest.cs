@@ -89,13 +89,128 @@ namespace Project2Test
                 };
 
 
-                controller.AddBooking(GetMockBooking());
+                controller.AddBooking(BookingDTO);
                 var booking = context.Bookings.Single();
 
                 Assert.Equal(1, booking.Id);
                 Assert.Equal("11/11/2024 18:32:06", context.Bookings.FirstOrDefault().Time.ToString());
             }
         }
+
+        [Fact]
+        public void TestAddBooking()
+        {
+            var services = GetBookingServiceProivder();
+            using (var scope = services.CreateScope())
+            {
+                var repo = scope.ServiceProvider.GetService<IBookingRepository>();
+                var service = new BookingService(repo, _mapper);
+                var context = scope.ServiceProvider.GetService<EstateContext>();
+                var controller = new BookingController(service);
+                //Clear database
+                context.Database.EnsureDeleted();
+
+                var BookingDTO = new BookingDTO
+                {
+                    BuyerId = 2,
+                    PropertyId = 10,
+                    Time = new DateTime(2024, 11, 11, 18, 32, 6),
+                };
+
+                controller.AddBooking(BookingDTO);
+                var booking = context.Bookings.Single();
+
+                Assert.Equal(1, booking.Id);
+                Assert.Equal(2, booking.BuyerId);
+                Assert.Equal(10, booking.PropertyId);
+                Assert.Equal("11/11/2024 18:32:06", context.Bookings.FirstOrDefault().Time.ToString());
+            }
+        }
+        [Fact]
+        public void TestDeleteBooking()
+        {
+            var services = GetBookingServiceProivder();
+            using (var scope = services.CreateScope())
+            {
+                var repo = scope.ServiceProvider.GetService<IBookingRepository>();
+                var service = new BookingService(repo, _mapper);
+                var context = scope.ServiceProvider.GetService<EstateContext>();
+                var controller = new BookingController(service);
+
+                context.Database.EnsureDeleted();
+
+                var BookingDTO = new BookingDTO
+                {
+                    BuyerId = 2,
+                    PropertyId = 10,
+                    Time = new DateTime(2024, 11, 11, 18, 32, 6),
+                };
+
+
+                controller.AddBooking(BookingDTO);
+                var bookingId = context.Bookings.Single().Id;
+                //= context.Buyers.Single();
+                controller.DeleteBooking(bookingId);
+                //  Assert.Equal(1, buyer.Id);
+                Assert.Equal(0, context.Bookings.Count());
+            }
+        }
+
+        //[Fact]
+        //public void TestUpdateBooking()
+        //{
+        //    var services = GetBookingServiceProivder();
+        //    using (var scope = services.CreateScope())
+        //    {
+        //        var repo = scope.ServiceProvider.GetService<IBookingRepository>();
+        //        var service = new BookingService(repo, _mapper);
+        //        var context = scope.ServiceProvider.GetService<EstateContext>();
+        //        var controller = new BookingController(service);
+        //        //Clear database
+        //        context.Database.EnsureDeleted();
+
+        //        var BookingDTO = new BookingDTO
+        //        {
+        //            BuyerId = 2,
+        //            PropertyId = 10,
+        //            Time = new DateTime(2024, 11, 11, 18, 32, 6),
+        //        };
+
+
+        //        //controller.AddBooking(BookingDTO);
+        //        //var booking = context.Bookings.Single();
+        //        ////var newTime = new DateTime(2025, 11, 11, 18, 32, 6);
+
+        //        //controller.UpdateBooking(BookingDTO = new BookingDTO
+        //        //{
+        //        //    BuyerId = 2,
+        //        //    PropertyId = 10,
+        //        //    Time = new DateTime(2025, 11, 11, 18, 32, 6),
+        //        //});
+        //        //booking = context.Bookings.Single();
+        //        controller.AddBooking(BookingDTO);
+        //        var booking = context.Bookings.Single();
+
+        //        controller.UpdateBooking(BookingDTO = new BookingDTO
+        //        {
+        //            BuyerId = 2,
+        //            PropertyId = 10,
+        //            Time = new DateTime(2025, 11, 11, 18, 32, 6),
+        //        });
+
+        //        var booking2 = context.Bookings.Single();
+
+        //        //Assert.Equal(1, booking.Id);
+        //        Assert.Equal(2, booking2.BuyerId);
+        //        Assert.Equal(10, booking2.PropertyId);
+        //        Assert.Equal("11/11/2025 18:32:06", context.Bookings.FirstOrDefault().Time.ToString());
+
+        //    }
+        //}
+
+
+
+
     }
 }
 
