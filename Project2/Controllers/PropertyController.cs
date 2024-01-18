@@ -7,6 +7,7 @@ using System.Net;
 
 namespace Project2.Controllers
 {
+    [Authorize]
     [Route("[controller]")]
     [ApiController]
     public class PropertyController : ControllerBase
