@@ -23,6 +23,9 @@ namespace Project2.Business.Services
             
             CreateMap<Seller, SellerDTO>();
             CreateMap<SellerDTO, Seller>();
+
+            CreateMap<Booking, BookingDTO>();
+            CreateMap<BookingDTO, Booking>();
             
         }
 
