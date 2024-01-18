@@ -14,6 +14,7 @@ namespace Project2.Business.DTO
         }
 
         [Key]
+        [Column("id")]
         public override int Id { get; set; }
         public int BuyerId { get; set; }
 

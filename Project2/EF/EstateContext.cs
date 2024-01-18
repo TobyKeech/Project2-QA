@@ -21,6 +21,7 @@ namespace Project2.EF
         public virtual DbSet<Buyer> Buyers { get; set; } = null!;
         public virtual DbSet<Property> Properties { get; set; } = null!;
         public virtual DbSet<Seller> Sellers { get; set; } = null!;
+        public virtual DbSet<User>? Users { get; set; }
 
         public virtual DbSet<Booking> Bookings { get; set; } = null!;
 
@@ -130,16 +131,16 @@ namespace Project2.EF
                     .HasMaxLength(9)
                     .HasColumnName("TYPE");
 
-                // entity.HasOne(d => d.Buyer)
-                //    .WithMany(p => p.Properties)
-                //    .HasForeignKey(d => d.BuyerId)
-                //    .HasConstraintName("property$property_ibfk_2");
+                entity.HasOne(d => d.Buyer)
+                   .WithMany(p => p.Properties)
+                   .HasForeignKey(d => d.BuyerId)
+                   .HasConstraintName("property$property_ibfk_2");
 
-                //entity.HasOne(d => d.Seller)
-                //   .WithMany(p => p.Properties)
-                //   .HasForeignKey(d => d.SellerId)
-                //   .OnDelete(DeleteBehavior.ClientSetNull)
-                //   .HasConstraintName("property$property_ibfk_1");
+                entity.HasOne(d => d.Seller)
+                   .WithMany(p => p.Properties)
+                   .HasForeignKey(d => d.SellerId)
+                   .OnDelete(DeleteBehavior.ClientSetNull)
+                   .HasConstraintName("property$property_ibfk_1");
             });
 
             modelBuilder.Entity<Seller>(entity =>
