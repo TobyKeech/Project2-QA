@@ -1,20 +1,20 @@
  #                                                       ✨ ${\textsf{\color{ #FF1493}Project 2}}$ ✨
 
 
-
 ## ✨  ${\textsf{\color{ #FF1493}Installation }}$  ✨
 To install the application, clone the repositor: 
 
 <!-- start: code block --> 
 ## ✨  ${\textsf{\color{ #FF1493}Clone this repository }}$  ✨ 
+  
 git clone https://github.com/TobyKeech/Project2-QA
-
 
 cd Project2
 
 
 ## ✨  ${\textsf{\color{#FF1493}Install all dependencies }}$✨
-npm install 
+   
+npm install
 
 
 ## ✨ ${\textsf{\color{#FF1493}Initialising the database }}$ ✨
@@ -70,16 +70,17 @@ To Create a C# API backend and connect it to a React frontend!
 🌺 Going over presentation.                                                                                                                                          
 🌺 Presentation time.
 
-# ${\textsf{\color{pink}Things to look at next iteration }}$ 👀 
+# ${\textsf{\color{#FF1493}Things to look at next iteration }}$ 👀 
 
-# ✨ ${\textsf{\color{pink}Issues Faced }}$ ✨ 
-🌺 Git merge conflicts.                                                                                                                                     
-🌺 Branch Deviations and general tidyness of these.                                                                                                                                          
+# ✨ ${\textsf{\color{#FF1493}Issues Faced }}$ ✨ 
+
+🌺 Git merge conflicts.                                                                                                                              
+🌺 Branch Deviations and general tidyness of these.                                                                                                                         
 🌺 Passing information of backend to the frontend.
-🌺 Database first approach caused problems with relationships and foreign keys.                                                                                                                                     
+🌺 Database first approach caused problems with relationships and foreign keys.                                                                                          
 🌺 Delete Method-implementation of cascading delete.  
 
-# ✨ ${\textsf{\color{pink}Contributing }}$ ✨ 
+# ✨ ${\textsf{\color{#FF1493}Contributing }}$ ✨ 
 
 Project is an open-source project and we welcome contributions from the community.
 
