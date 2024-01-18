@@ -1,48 +1,49 @@
- #                                                       ✨ ${\textsf{\color{pink}Project 2}}$ ✨
+ #                                                       ✨ ${\textsf{\color{ #FFA6C9}Project 2}}$ ✨
 
 
 
-## ✨  ${\textsf{\color{pink}Installation }}$  ✨
+## ✨  ${\textsf{\color{ #E0115F}Installation }}$  ✨
 To install the application, clone the repositor: 
 
 <!-- start: code block --> 
-## ✨  ${\textsf{\color{pink}Clone this repository }}$  ✨ 
+## ✨  ${\textsf{\color{ #FF8E8E}Clone this repository }}$  ✨ 
 git clone https://github.com/TobyKeech/Project2-QA
+
 
 cd Project2
 
 
-## ✨  ${\textsf{\color{pink}Install all dependencies }}$✨
+## ✨  ${\textsf{\color{#F64A8A}Install all dependencies }}$✨
 npm install 
 
 
-## ✨ ${\textsf{\color{pink}Initialising the database }}$ ✨
+## ✨ ${\textsf{\color{#E52B50}Initialising the database }}$ ✨
 execute the DbScript.sql in Microsoft SQL Sever - Make sure connection is set to local 
 
 
-## ✨ ${\textsf{\color{pink}Running the app }}$ ✨
+## ✨ ${\textsf{\color{ #F25278}Running the app }}$ ✨
 npm start - front end 
 
 
-## ✨ ${\textsf{\color{pink} Open }}$ http://localhost:3000 ${\textsf{\color{pink} in your browser }}$ ✨
+## ✨ ${\textsf{\color{ #E3256B} Open }}$ http://localhost:3000 ${\textsf{\color{ #E3256B} in your browser }}$ ✨
 open http://localhost:3000
 <!-- end:code block -->
 
 
 
 
-# ✨ ${\textsf{\color{pink}The Team }}$ ✨
+# ✨ ${\textsf{\color{#FF1493}The Team }}$ ✨
 
 <a href="https://github.com/TobyKeech/Project2-QA/contributors">
   <img src="https://contrib.rocks/image?repo=TobyKeech/Project2-QA" />
 </a>
 
 
-#  ✨ ${\textsf{\color{pink}The Dream }}$ ✨
+#  ✨ ${\textsf{\color{#EF5395}The Dream }}$ ✨
 To Create a c# API backend and connect it to a react frontend!
 
 
-# ✨ ${\textsf{\color{pink}Development Week }}$ ✨
+# ✨ ${\textsf{\color{#F56991}Development Week }}$ ✨
 
 
 ## ${\textsf{\color{lightgreen} Day 1 }}$
@@ -70,6 +71,13 @@ To Create a c# API backend and connect it to a react frontend!
 🌺 Presentation time.
 
 # ${\textsf{\color{pink}Things to look at next iteration }}$ 👀 
+
+# ✨ ${\textsf{\color{pink}Issues Faced }}$ ✨ 
+🌺 Git merge conflicts.                                                                                                                                     
+🌺 Branch Deviations and general tidyness of these.                                                                                                                                          
+🌺 Passing information of backend to the frontend.
+🌺 Database first approach caused problems with relationships and foreign keys.                                                                                                                                     
+🌺 Delete Method-implementation of cascading delete.  
 
 # ✨ ${\textsf{\color{pink}Contributing }}$ ✨ 
 
