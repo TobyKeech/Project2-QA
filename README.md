@@ -1,26 +1,26 @@
-# ✨ $${\color{pink}Project \space 2}$$  ✨
+# ✨ ${\textsf{\color{pink}Project 2}}$ ✨
 
-## ✨ Installation ✨
+## ✨  ${\textsf{\color{pink}Installation }}$  ✨
 To install the application, clone the repositor: 
 
 <!-- start: code block --> 
-# ✨ Clone this repository ✨ 
+# ✨  ${\textsf{\color{pink}Clone this repository }}$  ✨ 
 git clone https://github.com/TobyKeech/Project2-QA
 cd Project2
-# ✨ Install all dependencies ✨
+# ✨  ${\textsf{\color{pink}Install all dependencies }}$✨
 npm install 
 
-# ✨ Initialising the database ✨
+# ✨ ${\textsf{\color{pink}Initialising the database }}$ ✨
 execute the DbScript.sql in Microsoft SQL Sever - Make sure connection is set to local 
 
-# ✨ Running the app ✨
+# ✨ ${\textsf{\color{pink}Running the app }}$ ✨
 npm start - front end 
 
-# ✨Open http://localhost:3000 in your browser
+# ✨ ${\textsf{\color{pink} Open }}$ http://localhost:3000 ${\textsf{\color{pink} in your browser }}$ ✨
 open http://localhost:3000
 <!-- end:code block -->
 
-## ✨ Contributing ✨
+## ✨ ${\textsf{\color{pink}Contributing }}$ ✨ 
 
 Project is an open-source project and we welcome contributions from the community.
 
@@ -33,7 +33,7 @@ If you'd like to contribute, please fork the repository and make changes as you'
 </div>
 
 
-### Our Contributors ✨
+### ✨ ${\textsf{\color{pink}Our Contributors }}$ ✨
 
 <a href="https://github.com/TobyKeech/Project2-QA/contributors">
   <img src="https://contrib.rocks/image?repo=TobyKeech/Project2-QA" />
