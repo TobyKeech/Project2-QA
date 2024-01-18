@@ -14,10 +14,9 @@ namespace Project2.Models
         public int BuyerId { get; set; }
         public int PropertyId { get; set; }
         public DateTime? Time { get; set; }
-
-       public virtual Buyer Buyer { get; set; } = null!;
-       public virtual Property Property { get; set; } = null!;
-
+        
+        public virtual Buyer Buyer { get; set; } = null!;
+        public virtual Property Property { get; set; } = null!;
 
         public object Clone()
         {
