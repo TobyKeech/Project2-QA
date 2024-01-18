@@ -46,9 +46,9 @@ To Create a c# API backend and connect it to a react frontend!
 
 
 ## ${\textsf{\color{lightgreen} Day 1 }}$
-:hibiscus: Created the DbScript that genrates the tables in Microsoft SQL Server as well as create the queries to insert dummy data into the database.
-:hibiscus: Connected API project to the database and generated the Models for the backend application.      
-:hibiscus: Created the controllers and DTOs (Data Transfer Object) and services for each model so that they can be used in the frontend. 
+* :hibiscus: Created the DbScript that genrates the tables in Microsoft SQL Server as well as create the queries to insert dummy data into the database.
+* :hibiscus: Connected API project to the database and generated the Models for the backend application.      
+* :hibiscus: Created the controllers and DTOs (Data Transfer Object) and services for each model so that they can be used in the frontend. 
 
 ## ${\textsf{\color{lightgreen} Day 2 }}$                       
 :hibiscus: Finshed up on adding the controllers and DTOs (Data Transfer Object) and services for each model so that they can be used in the frontend. 
@@ -60,17 +60,17 @@ To Create a c# API backend and connect it to a react frontend!
 :hibiscus: Worked on incorporating JWT authentication into the project so that users can login and have permissions to see only certain components. 
 
 ## ${\textsf{\color{lightgreen} Day 4 }}$                       
-:hibiscus: Added a login screen for authentication.                                                                                            
-:hibiscus: Fixed issues with deleting a property if it has any bookings associated to the property that is to be deleted.                                   
-:hibiscus: Started to create the presentation slides. 
+🌺 Added a login screen for authentication.                                                                                            
+🌺 Fixed issues with deleting a property if it has any bookings associated to the property that is to be deleted.                                   
+🌺 Started to create the presentation slides. 
 
 ## ${\textsf{\color{lightgreen} Day 5}}$                       
 :hibiscus: Last miniute structuring.                                                                                                                                     
 :hibiscus: Going over presentation.                                                                                                                                          
 :hibiscus: Presentation time.
 
-
-## ✨ ${\textsf{\color{pink}Contributing }}$ ✨ 
+# Things to look at next iteration 👀 :eyes:
+#✨ ${\textsf{\color{pink}Contributing }}$ ✨ 
 
 Project is an open-source project and we welcome contributions from the community.
 
