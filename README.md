@@ -1,4 +1,4 @@
-# ✨ <span style="color: pink">Project2 </span>✨
+# ✨ $${\color{pink}Project \space 2}$$  ✨
 
 ## ✨ Installation ✨
 To install the application, clone the repositor: 
