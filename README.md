@@ -46,13 +46,13 @@ To Create a c# API backend and connect it to a react frontend!
 
 
 ## ${\textsf{\color{lightgreen} Day 1 }}$
-* :hibiscus: Created the DbScript that genrates the tables in Microsoft SQL Server as well as create the queries to insert dummy data into the database.
-* :hibiscus: Connected API project to the database and generated the Models for the backend application.      
-* :hibiscus: Created the controllers and DTOs (Data Transfer Object) and services for each model so that they can be used in the frontend. 
+🌺 Created the DbScript that genrates the tables in Microsoft SQL Server as well as create the queries to insert dummy data into the database.
+🌺 Connected API project to the database and generated the Models for the backend application.      
+🌺 Created the controllers and DTOs (Data Transfer Object) and services for each model so that they can be used in the frontend. 
 
 ## ${\textsf{\color{lightgreen} Day 2 }}$                       
-:hibiscus: Finshed up on adding the controllers and DTOs (Data Transfer Object) and services for each model so that they can be used in the frontend. 
-:hibiscus: Started unit testing each contoller to ensure the backend works as intended - all CRUD (Create, Read, Update and Delete) functionality, using XUnit. 
+🌺 Finshed up on adding the controllers and DTOs (Data Transfer Object) and services for each model so that they can be used in the frontend. 
+🌺 Started unit testing each contoller to ensure the backend works as intended - all CRUD (Create, Read, Update and Delete) functionality, using XUnit. 
 
 ## ${\textsf{\color{lightgreen} Day 3 }}$                       
 🌺 Finshed unit testing each contoller to ensure the backend works as intended - all CRUD functionality using XUint.                             
