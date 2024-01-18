@@ -39,7 +39,7 @@ open http://localhost:3000
 </a>
 
 
-#  ✨ ${\textsf{\color{#EF5395}The Dream }}$ ✨
+#  ✨ ${\textsf{\color{#E85395}The Dream }}$ ✨
 To Create a C# API backend and connect it to a React frontend!
 
 
