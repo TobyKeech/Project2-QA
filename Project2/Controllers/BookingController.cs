@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Project2.Business.DTO;
 using Project2.Business.Services;
 using System.Net;
 
 namespace Project2.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class BookingController : ControllerBase
@@ -17,6 +19,7 @@ namespace Project2.Controllers
         }
 
         //Get all bookings
+        [AllowAnonymous]
         [HttpGet]
         public IEnumerable<BookingDTO> Index()
         {
@@ -24,6 +27,7 @@ namespace Project2.Controllers
             return booking;
         }
         //Find booking by Id
+        [AllowAnonymous]
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
