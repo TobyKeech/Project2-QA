@@ -8,7 +8,10 @@ namespace Project2.Business.DTO
 {
     public class SellerDTO : EntityBase, IEquatable<SellerDTO>
     {
-        public SellerDTO() { }
+        public SellerDTO()
+        {
+            Properties = new HashSet<PropertyDTO>();
+        }
 
         [Column("SELLER_ID")]
         [Key]
@@ -20,7 +23,7 @@ namespace Project2.Business.DTO
         public string Postcode { get; set; } = null!;
         public string Phone { get; set; } = null!;
 
-        public virtual ICollection<Property> Properties { get; set; }
+        public virtual ICollection<PropertyDTO>? Properties { get; set; }
 
         public bool Equals(SellerDTO? other)
         {
