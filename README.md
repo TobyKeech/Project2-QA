@@ -1,31 +1,31 @@
- #                                                       ✨ ${\textsf{\color{ #FFA6C9}Project 2}}$ ✨
+ #                                                       ✨ ${\textsf{\color{ #FF1493}Project 2}}$ ✨
 
 
 
-## ✨  ${\textsf{\color{ #E0115F}Installation }}$  ✨
+## ✨  ${\textsf{\color{ #FF1493}Installation }}$  ✨
 To install the application, clone the repositor: 
 
 <!-- start: code block --> 
-## ✨  ${\textsf{\color{ #FF8E8E}Clone this repository }}$  ✨ 
+## ✨  ${\textsf{\color{ #FF1493}Clone this repository }}$  ✨ 
 git clone https://github.com/TobyKeech/Project2-QA
 
 
 cd Project2
 
 
-## ✨  ${\textsf{\color{#F64A8A}Install all dependencies }}$✨
+## ✨  ${\textsf{\color{#FF1493}Install all dependencies }}$✨
 npm install 
 
 
-## ✨ ${\textsf{\color{#E52B50}Initialising the database }}$ ✨
+## ✨ ${\textsf{\color{#FF1493}Initialising the database }}$ ✨
 execute the DbScript.sql in Microsoft SQL Sever - Make sure connection is set to local 
 
 
-## ✨ ${\textsf{\color{ #F25278}Running the app }}$ ✨
+## ✨ ${\textsf{\color{ #FF1493}Running the app }}$ ✨
 npm start - front end 
 
 
-## ✨ ${\textsf{\color{ #E3256B} Open }}$ http://localhost:3000 ${\textsf{\color{ #E3256B} in your browser }}$ ✨
+## ✨ ${\textsf{\color{ #FF1493} Open }}$ http://localhost:3000 ${\textsf{\color{#FF1493} in your browser }}$ ✨
 open http://localhost:3000
 <!-- end:code block -->
 
@@ -39,11 +39,11 @@ open http://localhost:3000
 </a>
 
 
-#  ✨ ${\textsf{\color{#E85395}The Dream }}$ ✨
+#  ✨ ${\textsf{\color{#FF1493}The Dream }}$ ✨
 To Create a C# API backend and connect it to a React frontend!
 
 
-# ✨ ${\textsf{\color{#F56991}Development Week }}$ ✨
+# ✨ ${\textsf{\color{#FF1493}Development Week }}$ ✨
 
 
 ## ${\textsf{\color{lightgreen} Day 1 }}$
