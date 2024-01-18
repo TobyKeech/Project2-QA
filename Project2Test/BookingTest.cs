@@ -68,34 +68,34 @@ namespace Project2Test
             }
         }
 
-        //[Fact]
+        [Fact]
 
-        //public void TestGetBookingById()
-        //{
-        //    var services = GetBookingServiceProivder();
-        //    using (var scope = services.CreateScope())
-        //    {
-        //        var repo = scope.ServiceProvider.GetService<IBookingRepository>();
-        //        var service = new BookingService(repo, _mapper);
-        //        var context = scope.ServiceProvider.GetService<EstateContext>();
-        //        var controller = new BookingController(service);
-         
-        //        context.Database.EnsureDeleted();
+        public void TestGetBookingById()
+        {
+            var services = GetBookingServiceProivder();
+            using (var scope = services.CreateScope())
+            {
+                var repo = scope.ServiceProvider.GetService<IBookingRepository>();
+                var service = new BookingService(repo, _mapper);
+                var context = scope.ServiceProvider.GetService<EstateContext>();
+                var controller = new BookingController(service);
 
-        //        var BookingDTO = new BookingDTO
-        //        {
-        //            Time = new DateTime(2025, 11, 11, 18, 32, 6),
+                context.Database.EnsureDeleted();
 
-        //        };
+                var BookingDTO = new BookingDTO
+                {
+                    Time = new DateTime(2024, 11, 11, 18, 32, 6),
+
+                };
 
 
-        //        controller.AddBooking(GetMockBooking());
-        //        var booking = context.Bookings.Single();
+                controller.AddBooking(GetMockBooking());
+                var booking = context.Bookings.Single();
 
-        //        Assert.Equal(1, booking.Id);
-        //        Assert.Equal("11/11/2025 18:32:06", context.Bookings.FirstOrDefault().Time.ToString());
-        //    }
-        //}
+                Assert.Equal(1, booking.Id);
+                Assert.Equal("11/11/2024 18:32:06", context.Bookings.FirstOrDefault().Time.ToString());
+            }
+        }
     }
 }
 

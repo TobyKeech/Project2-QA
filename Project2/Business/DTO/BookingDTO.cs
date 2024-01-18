@@ -15,9 +15,9 @@ namespace Project2.Business.DTO
 
         [Key]
         public override int Id { get; set; }
-        public int BuyerId { get { return Id; } set { Id = value; } }
+        public int BuyerId { get; set; }
 
-        public int PropertyId { get { return Id; } set { Id = value; } }
+        public int PropertyId { get; set; }
         public DateTime Time { get; set; }
 
         public bool Equals(BookingDTO? other)
