@@ -1,22 +1,22 @@
- #                                                       ✨ ${\textsf{\color{pink}Project 2}}$ ✨
+ #                                                       ✨ ${\textsf{\color{ #FFA6C9}Project 2}}$ ✨
 
 
 
-## ✨  ${\textsf{\color{pink}Installation }}$  ✨
+## ✨  ${\textsf{\color{ #E0115F}Installation }}$  ✨
 To install the application, clone the repositor: 
 
 <!-- start: code block --> 
-## ✨  ${\textsf{\color{pink}Clone this repository }}$  ✨ 
+## ✨  ${\textsf{\color{ #FF8E8E}Clone this repository }}$  ✨ 
 git clone https://github.com/TobyKeech/Project2-QA
 
 cd Project2
 
 
-## ✨  ${\textsf{\color{pink}Install all dependencies }}$✨
+## ✨  ${\textsf{\color{#F64A8A}Install all dependencies }}$✨
 npm install 
 
 
-## ✨ ${\textsf{\color{pink}Initialising the database }}$ ✨
+## ✨ ${\textsf{\color{#E52B50}Initialising the database }}$ ✨
 execute the DbScript.sql in Microsoft SQL Sever - Make sure connection is set to local 
 
 
@@ -31,14 +31,14 @@ open http://localhost:3000
 
 
 
-# ✨ ${\textsf{\color{pink}The Team }}$ ✨
+# ✨ ${\textsf{\color{#FF1493}The Team }}$ ✨
 
 <a href="https://github.com/TobyKeech/Project2-QA/contributors">
   <img src="https://contrib.rocks/image?repo=TobyKeech/Project2-QA" />
 </a>
 
 
-#  ✨ ${\textsf{\color{pink}The Dream }}$ ✨
+#  ✨ ${\textsf{\color{#EF5395}The Dream }}$ ✨
 To Create a c# API backend and connect it to a react frontend!
 
 
