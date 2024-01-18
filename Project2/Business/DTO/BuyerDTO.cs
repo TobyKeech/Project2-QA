@@ -9,7 +9,7 @@ namespace Project2.Business.DTO
     {
 	public BuyerDTO()
 	{
-            //Bookings = new HashSet<BookingDTO>();
+            Bookings = new HashSet<BookingDTO>();
             Properties = new HashSet<PropertyDTO>();
         }
         [Key]
@@ -24,7 +24,7 @@ namespace Project2.Business.DTO
         public string Phone { get; set; }
 
         public virtual ICollection<PropertyDTO> Properties { get; set; }
-        //public virtual ICollection<Booking> Bookings{ get; set; }
+        public virtual ICollection<BookingDTO> Bookings{ get; set; }
 
         public bool Equals(BuyerDTO? other)
         {
