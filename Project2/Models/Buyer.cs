@@ -11,7 +11,7 @@ namespace Project2.Models
         public Buyer()
         {
             // Bookings = new HashSet<Booking>();
-            // Properties = new HashSet<Property>();
+             Properties = new HashSet<Property>();
         }
 
         [Column("BuyerId")]
@@ -23,7 +23,7 @@ namespace Project2.Models
         public string Postcode { get; set; } = null!;
         public string Phone { get; set; } = null!;
 
-        public virtual ICollection<Booking> Bookings { get; set; }
+        //public virtual ICollection<Booking> Bookings { get; set; }
         public virtual ICollection<Property> Properties { get; set; }
 
         public bool Equals(Buyer? other)
