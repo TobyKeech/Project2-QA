@@ -8,8 +8,7 @@ using System.Net;
 
 namespace Project2.Controllers
 {
-    [Authorize]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class BuyerController : ControllerBase
     {

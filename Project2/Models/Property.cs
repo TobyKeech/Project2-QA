@@ -8,11 +8,11 @@ namespace Project2.Models
 {
     public partial class Property : EntityBase, IEquatable<Property>
     {
-       // public Property()
-       // {
+        public Property()
+        {
        //     Bookings = new HashSet<Booking>();
-       //     booking set that can be tried when booking is carted
-       // }
+       //     booking set that can be tried when booking is created
+       }
 
         [Column("Property_Id")]
         [Key]
@@ -28,8 +28,9 @@ namespace Project2.Models
         public int SellerId { get; set; }
         public int? BuyerId { get; set; }
 
-        //public virtual Buyer? Buyer { get; set; }
-        //public virtual Seller Seller { get; set; } = null!;
+        public virtual Buyer? Buyer { get; set; }
+        public virtual Seller Seller { get; set; } = null!;
+
        // public virtual ICollection<Booking> Bookings { get; set; }
        
        //certian areas of the code are commented out as they are not needed for the project currently

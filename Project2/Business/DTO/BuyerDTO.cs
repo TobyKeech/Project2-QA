@@ -9,8 +9,8 @@ namespace Project2.Business.DTO
     {
 	public BuyerDTO()
 	{
-            //MovieCast = new HashSet<MovieCaseDTO>();
-            //MovieCrew = new HashSet<MovieCrewDTO>();
+            //Bookings = new HashSet<BookingDTO>();
+            Properties = new HashSet<PropertyDTO>();
         }
         [Key]
         public override int Id { get; set; }
@@ -23,13 +23,9 @@ namespace Project2.Business.DTO
         public string Postcode { get; set; }
         public string Phone { get; set; }
 
-
+        public virtual ICollection<PropertyDTO> Properties { get; set; }
         //public virtual ICollection<Booking> Bookings{ get; set; }
 
-        //public virtual ICollection<ProductionCompany> Companies { get; set; }
-
-        //public virtual ICollection<MovieCastDTO> MovieCast { get; set; }
-        //public virtual ICollection<MovieCrewDTO> MovieCrew { get; set; }
         public bool Equals(BuyerDTO? other)
         {
             return Id == other.Id;
