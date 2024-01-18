@@ -20,11 +20,11 @@ npm install
 execute the DbScript.sql in Microsoft SQL Sever - Make sure connection is set to local 
 
 
-## ✨ ${\textsf{\color{pink}Running the app }}$ ✨
+## ✨ ${\textsf{\color{ #F25278}Running the app }}$ ✨
 npm start - front end 
 
 
-## ✨ ${\textsf{\color{pink} Open }}$ http://localhost:3000 ${\textsf{\color{pink} in your browser }}$ ✨
+## ✨ ${\textsf{\color{ #E3256B} Open }}$ http://localhost:3000 ${\textsf{\color{ #E3256B} in your browser }}$ ✨
 open http://localhost:3000
 <!-- end:code block -->
 
@@ -42,7 +42,7 @@ open http://localhost:3000
 To Create a c# API backend and connect it to a react frontend!
 
 
-# ✨ ${\textsf{\color{pink}Development Week }}$ ✨
+# ✨ ${\textsf{\color{#F56991}Development Week }}$ ✨
 
 
 ## ${\textsf{\color{lightgreen} Day 1 }}$
