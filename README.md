@@ -1,31 +1,31 @@
- #                                                       ✨ ${\textsf{\color{ #FFA6C9}Project 2}}$ ✨
+ #                                                       ✨ ${\textsf{\color{ #FF1493}Project 2}}$ ✨
 
 
-
-## ✨  ${\textsf{\color{ #E0115F}Installation }}$  ✨
+## ✨  ${\textsf{\color{ #FF1493}Installation }}$  ✨
 To install the application, clone the repositor: 
 
 <!-- start: code block --> 
-## ✨  ${\textsf{\color{ #FF8E8E}Clone this repository }}$  ✨ 
+## ✨  ${\textsf{\color{ #FF1493}Clone this repository }}$  ✨ 
+  
 git clone https://github.com/TobyKeech/Project2-QA
-
 
 cd Project2
 
 
-## ✨  ${\textsf{\color{#F64A8A}Install all dependencies }}$✨
-npm install 
+## ✨  ${\textsf{\color{#FF1493}Install all dependencies }}$✨
+   
+npm install
 
 
-## ✨ ${\textsf{\color{#E52B50}Initialising the database }}$ ✨
+## ✨ ${\textsf{\color{#FF1493}Initialising the database }}$ ✨
 execute the DbScript.sql in Microsoft SQL Sever - Make sure connection is set to local 
 
 
-## ✨ ${\textsf{\color{ #F25278}Running the app }}$ ✨
+## ✨ ${\textsf{\color{ #FF1493}Running the app }}$ ✨
 npm start - front end 
 
 
-## ✨ ${\textsf{\color{ #E3256B} Open }}$ http://localhost:3000 ${\textsf{\color{ #E3256B} in your browser }}$ ✨
+## ✨ ${\textsf{\color{ #FF1493} Open }}$ http://localhost:3000 ${\textsf{\color{#FF1493} in your browser }}$ ✨
 open http://localhost:3000
 <!-- end:code block -->
 
@@ -39,11 +39,11 @@ open http://localhost:3000
 </a>
 
 
-#  ✨ ${\textsf{\color{#EF5395}The Dream }}$ ✨
-To Create a c# API backend and connect it to a react frontend!
+#  ✨ ${\textsf{\color{#FF1493}The Dream }}$ ✨
+To Create a C# API backend and connect it to a React frontend!
 
 
-# ✨ ${\textsf{\color{#F56991}Development Week }}$ ✨
+# ✨ ${\textsf{\color{#FF1493}Development Week }}$ ✨
 
 
 ## ${\textsf{\color{lightgreen} Day 1 }}$
@@ -70,16 +70,23 @@ To Create a c# API backend and connect it to a react frontend!
 🌺 Going over presentation.                                                                                                                                          
 🌺 Presentation time.
 
-# ${\textsf{\color{pink}Things to look at next iteration }}$ 👀 
+# ${\textsf{\color{#FF1493}Trello}}$ 
 
-# ✨ ${\textsf{\color{pink}Issues Faced }}$ ✨ 
-🌺 Git merge conflicts.                                                                                                                                     
-🌺 Branch Deviations and general tidyness of these.                                                                                                                                          
+![image](https://github.com/TobyKeech/Project2-QA/assets/72978574/b06bf3ba-19b3-43d4-b46f-3d742a023cb8)
+![image](https://github.com/TobyKeech/Project2-QA/assets/72978574/36202203-2c38-4262-97bc-c7f1e1d8c49c)
+
+
+# ${\textsf{\color{#FF1493}Things to look at next iteration }}$ 👀 
+
+# ✨ ${\textsf{\color{#FF1493}Issues Faced }}$ ✨ 
+
+🌺 Git merge conflicts.                                                                                                                              
+🌺 Branch Deviations and general tidyness of these.                                                                                                                         
 🌺 Passing information of backend to the frontend.
-🌺 Database first approach caused problems with relationships and foreign keys.                                                                                                                                     
+🌺 Database first approach caused problems with relationships and foreign keys.                                                                                          
 🌺 Delete Method-implementation of cascading delete.  
 
-# ✨ ${\textsf{\color{pink}Contributing }}$ ✨ 
+# ✨ ${\textsf{\color{#FF1493}Contributing }}$ ✨ 
 
 Project is an open-source project and we welcome contributions from the community.
 
