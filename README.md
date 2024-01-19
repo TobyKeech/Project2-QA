@@ -23,6 +23,7 @@ For both repositories cloned, you will have to run the follwong command to insta
 npm install
 ```
 
+
 ## ✨ ${\textsf{\color{#FF1493}Initialising the database }}$ ✨
 execute the DbScript.sql in Microsoft SQL Sever - Make sure connection is set to local 
 
@@ -31,7 +32,7 @@ execute the DbScript.sql in Microsoft SQL Sever - Make sure connection is set to
 To run the front, you will have to run the follwoing command in the terminal:
 ```
 npm start 
-``
+```
 
 ## ✨ ${\textsf{\color{ #FF1493} Open }}$ http://localhost:3000 ${\textsf{\color{#FF1493} in your browser }}$ ✨
 open http://localhost:3000
