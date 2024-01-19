@@ -1,4 +1,4 @@
->  #                                                       ✨ ${\textsf{\color{ #FF1493}Project 2}}$ ✨
+# <div align="center">✨ ${\textsf{\color{ #FF1493}Project 2}}$ ✨ </div>
 
 
 ## ✨  ${\textsf{\color{ #FF1493}Installation }}$  ✨
@@ -6,24 +6,32 @@ To install the application, clone the repositor:
 
 <!-- start: code block --> 
 ## ✨  ${\textsf{\color{ #FF1493}Clone this repository }}$  ✨ 
-  
+For the backend API app, clone the repository for project 2 by running the follwoing commands:
+ ```
 git clone https://github.com/TobyKeech/Project2-QA
-
+```
+```
 cd Project2
-
-
+```
+For the frontend react app, clone the repository for project 1 by running the follwoing commands:
+```
+git clone https://github.com/TobyKeech/Project1-QA
+```
 ## ✨  ${\textsf{\color{#FF1493}Install all dependencies }}$✨
-   
+For both repositories cloned, you will have to run the follwong command to install all libraries need for the program to run:
+``` 
 npm install
-
+```
 
 ## ✨ ${\textsf{\color{#FF1493}Initialising the database }}$ ✨
 execute the DbScript.sql in Microsoft SQL Sever - Make sure connection is set to local 
 
 
 ## ✨ ${\textsf{\color{ #FF1493}Running the app }}$ ✨
-npm start - front end 
-
+To run the front, you will have to run the follwoing command in the terminal:
+```
+npm start 
+``
 
 ## ✨ ${\textsf{\color{ #FF1493} Open }}$ http://localhost:3000 ${\textsf{\color{#FF1493} in your browser }}$ ✨
 open http://localhost:3000
@@ -44,7 +52,7 @@ To Create a C# API backend and connect it to a React frontend!
 
 # ✨ ${\textsf{\color{#FF1493}Planning }}$ ✨
 
-## ✨ ${\textsf{\color{#FF1493}Trello}}$ ✨
+## ✨ ${\textsf{\color{#FF1493}MVP}}$ ✨
 Controllers, DTO, Mapping and entities for the following: 
 - Buyer
 - Seller
@@ -57,6 +65,7 @@ Controllers, DTO, Mapping and entities for the following:
 ![image](https://github.com/TobyKeech/Project2-QA/assets/72978574/b06bf3ba-19b3-43d4-b46f-3d742a023cb8)
 ![image](https://github.com/TobyKeech/Project2-QA/assets/72978574/36202203-2c38-4262-97bc-c7f1e1d8c49c)
 
+## ✨ ${\textsf{\color{#FF1493}Roles}}$ ✨
 
 # ✨ ${\textsf{\color{#FF1493}Development Week }}$ ✨
 
@@ -88,10 +97,10 @@ Controllers, DTO, Mapping and entities for the following:
 
 
 
-# ✨ ${\textsf{\color{#FF1493}Things to look at next iteration }}$ ✨ 
-👀 Login/Log out authentication display in frontend i.e. personalised navbar user logo or message display 
-👀 Images within SQL db for displaying properties instead of placeholde images
-👀 Using Toast to make UI friendly messages for errors 
+# ✨ ${\textsf{\color{#FF1493}Things to look at next iteration }}$ ✨ 👀
+- Login/Log out authentication display in frontend i.e. personalised navbar user logo or message display 
+- Images within SQL db for displaying properties instead of placeholde images
+- Using Toast to make UI friendly messages for errors 
 
 # ✨ ${\textsf{\color{#FF1493}Issues Faced }}$ ✨ 
 
