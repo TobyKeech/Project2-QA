@@ -86,6 +86,12 @@ To Create a C# API backend and connect it to a React frontend!
 🌺 Database first approach caused problems with relationships and foreign keys.                                                                                          
 🌺 Delete Method-implementation of cascading delete.  
 
+# ✨ ${\textsf{\color{#FF1493}What went well}}$ ✨ 
+🌺 Fixed issues quickly. 
+🌺 Collabaration on issues and ideas.   
+🌺 Git was a useful and structured rescource.   
+🌺 Positive Mental Attidude.   
+
 # ✨ ${\textsf{\color{#FF1493}Contributing }}$ ✨ 
 
 Project is an open-source project and we welcome contributions from the community.
