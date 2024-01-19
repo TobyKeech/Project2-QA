@@ -42,6 +42,21 @@ open http://localhost:3000
 #  ✨ ${\textsf{\color{#FF1493}The Dream }}$ ✨
 To Create a C# API backend and connect it to a React frontend!
 
+# ✨ ${\textsf{\color{#FF1493}Planning }}$ ✨
+
+## ✨ ${\textsf{\color{#FF1493}Trello}}$ ✨
+Controllers, DTO, Mapping and entities for the following: 
+- Buyer
+- Seller
+- Property
+- Booking
+- Create end to end (e2e) for each above
+
+## ✨ ${\textsf{\color{#FF1493}Trello}}$ ✨
+
+![image](https://github.com/TobyKeech/Project2-QA/assets/72978574/b06bf3ba-19b3-43d4-b46f-3d742a023cb8)
+![image](https://github.com/TobyKeech/Project2-QA/assets/72978574/36202203-2c38-4262-97bc-c7f1e1d8c49c)
+
 
 # ✨ ${\textsf{\color{#FF1493}Development Week }}$ ✨
 
@@ -70,21 +85,21 @@ To Create a C# API backend and connect it to a React frontend!
 🌺 Going over presentation.                                                                                                                                          
 🌺 Presentation time.
 
-# ✨${\textsf{\color{#FF1493}Trello}}$ ✨
-
-![image](https://github.com/TobyKeech/Project2-QA/assets/72978574/b06bf3ba-19b3-43d4-b46f-3d742a023cb8)
-![image](https://github.com/TobyKeech/Project2-QA/assets/72978574/36202203-2c38-4262-97bc-c7f1e1d8c49c)
 
 
-# ${\textsf{\color{#FF1493}Things to look at next iteration }}$ 👀 
+
+# ✨ ${\textsf{\color{#FF1493}Things to look at next iteration }}$ ✨ 
+👀 Login/Log out authentication display in frontend i.e. personalised navbar user logo or message display 
+👀 Images within SQL db for displaying properties instead of placeholde images
+👀 Using Toast to make UI friendly messages for errors 
 
 # ✨ ${\textsf{\color{#FF1493}Issues Faced }}$ ✨ 
 
-:rage2: Git merge conflicts.                                                                                                                              
-😡 Branch Deviations and general tidyness of these.                                                                                                                         
-:rage1: Passing information of backend to the frontend.
-:rage3: Database first approach caused problems with relationships and foreign keys.                                                                                          
-:rage1: Delete Method-implementation of cascading delete.  
+:rage:  Git merge conflicts.                                                                                                                              
+:rage: Branch Deviations and general tidyness of these.                                                                                                                         
+:rage: Passing information of backend to the frontend.
+:rage: Database first approach caused problems with relationships and foreign keys.                                                                                          
+:rage: Delete Method-implementation of cascading delete.  
 
 # ✨ ${\textsf{\color{#FF1493}What went well}}$ ✨ 
 🌺 Fixed issues quickly. 
@@ -101,5 +116,5 @@ If you'd like to contribute, please fork the repository and make changes as you'
 <div align="center">
   <a href="https://github.com/TobyKeech/Project2-QA/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/TobyKeech/Project2-QA"></a>
   
-  <a href="https://github.com/mfts/TobyKeech/Project2-QA/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-Slaying so hard its a serve-pink">💅</a>
+  <a href="https://github.com/mfts/TobyKeech/Project2-QA/main/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-AGPLv3-pink"></a>
 </div>
