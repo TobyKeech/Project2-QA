@@ -2,11 +2,11 @@
 
 
 ## ✨  ${\textsf{\color{ #FF1493}Installation }}$  ✨
-To install the application, clone the repositor: 
+To install the application, clone the repository: 
 
 <!-- start: code block --> 
 ## ✨  ${\textsf{\color{ #FF1493}Clone this repository }}$  ✨ 
-For the backend API app, clone the repository for project 2 by running the follwoing commands:
+For the backend API app, clone the repository for project 2 by running the following commands:
  ```
 git clone https://github.com/TobyKeech/Project2-QA
 ```
@@ -68,7 +68,19 @@ Controllers, DTO, Mapping and entities for the following:
 
 
 ## ✨ ${\textsf{\color{#FF1493}Roles}}$ ✨
+-Toby
+ - Windup Merchant/Leader
+   
+-Gemma
+ - Creative Director
+   
+-Vasu
+ - Backend Oracle
+   
+-Eyitayo
+ - Developer 
 
+ 
 # ✨ ${\textsf{\color{#FF1493}Development Week }}$ ✨
 
 
@@ -111,13 +123,13 @@ Controllers, DTO, Mapping and entities for the following:
     - street name
     - city
 
-# ✨ ${\textsf{\color{#FF1493}Issues Faced }}$ ✨ 
+# ✨ ${\textsf{\color{#FF1493}Issues Faced }}$ ✨ :rage:
 
-:rage: Git merge conflicts.                                                                                                                              
-:rage: Branch Deviations and general tidyness of these.                                                                                                                         
-:rage: Passing information of backend to the frontend.
-:rage: Database first approach caused problems with relationships and foreign keys.                                                                                          
-:rage: Delete Method-implementation of cascading delete.  
+- Git merge conflicts.                                                                                                                              
+- Branch Deviations and general tidyness of these.                                                                                                                         
+- Passing information of backend to the frontend.
+- Database first approach caused problems with relationships and foreign keys.                                                                                          
+- Delete Method-implementation of cascading delete.  
 
 # ✨ ${\textsf{\color{#FF1493}What went well}}$ ✨ 
 🌺 Fixed issues quickly. 
