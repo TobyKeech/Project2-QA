@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Project2.Business.DTO;
 using Project2.Models;
 using Project2.Persistence.Repositories;
+using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Linq.Expressions;
 
 namespace Project2.Business.Services
@@ -10,11 +11,13 @@ namespace Project2.Business.Services
     public class BuyerService: IBuyerService
     {
         IBuyerRepository _buyerRepository;
+        IBookingRepository _bookingRepository;
         private IMapper _mapper;
 
-        public BuyerService (IBuyerRepository buyerRepository, IMapper mapper)
+        public BuyerService (IBuyerRepository buyerRepository, IBookingRepository bookingRepository, IMapper mapper)
         {
             _buyerRepository = buyerRepository;
+            _bookingRepository = bookingRepository;
             _mapper = mapper;
         }
 
@@ -59,6 +62,14 @@ namespace Project2.Business.Services
         public void Delete(BuyerDTO dtoBuyer)
         {
             Buyer buyer = _mapper.Map<Buyer>(dtoBuyer);
+            var bookings = _bookingRepository.FindAll().ToList();
+            foreach (Booking booking in bookings)
+            {
+                if (booking.BuyerId == dtoBuyer.Id)
+                {
+                    _bookingRepository.Delete(booking);
+                }
+            }
             _buyerRepository.Delete(buyer);
         }
 
