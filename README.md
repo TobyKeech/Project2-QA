@@ -103,10 +103,10 @@ Controllers, DTO, Mapping and entities for the following:
 - Login/Log out authentication display in frontend i.e. personalised navbar user logo or message display such as using Toast to make UI friendly messages for errors 
 - Images within SQL db for displaying properties instead of placeholde images
 - Re-designing the database to have either:
-  - - Users and then set roles for both buyers and sellers
-  - - having permissions
-  - -creating an adress table that will reference each user
-  - - Having the adress input split into seperate fields i.e adress would become
+  - Users and then set roles for both buyers and sellers
+  - having permissions
+  - creating an adress table that will reference each user
+  - Having the adress input split into seperate fields i.e adress would become
     - house/apartment number
     - street name
     - city
