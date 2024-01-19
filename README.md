@@ -63,8 +63,9 @@ Controllers, DTO, Mapping and entities for the following:
 
 ## ✨ ${\textsf{\color{#FF1493}Trello}}$ ✨
 
-![image](https://github.com/TobyKeech/Project2-QA/assets/72978574/b06bf3ba-19b3-43d4-b46f-3d742a023cb8)
-![image](https://github.com/TobyKeech/Project2-QA/assets/72978574/36202203-2c38-4262-97bc-c7f1e1d8c49c)
+![image](https://github.com/TobyKeech/Project2-QA/assets/72978574/174b5a62-a38d-47fb-a5b4-b76dde0c8700)
+![image](https://github.com/TobyKeech/Project2-QA/assets/72978574/ba6d49df-7410-4ee9-ac72-6712716278e9)
+
 
 ## ✨ ${\textsf{\color{#FF1493}Roles}}$ ✨
 
