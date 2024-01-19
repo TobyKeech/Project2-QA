@@ -122,6 +122,10 @@ Controllers, DTO, Mapping and entities for the following:
     - house/apartment number
     - street name
     - city
+  - Implementing functionality that was not implemented:
+    - Adding a booking - specifically a chess board date time picker
+    - Editing a booking
+    - Deleting a booking
 
 # ✨ ${\textsf{\color{#FF1493}Issues Faced }}$ ✨ :rage:
 
